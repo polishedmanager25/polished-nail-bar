@@ -1,0 +1,12 @@
+[build]
+  command = "npm run build"
+  publish = "_site"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+# the CMS is a single-page app; every /admin path must serve its index
+[[redirects]]
+  from = "/admin/*"
+  to = "/admin/index.html"
+  status = 200

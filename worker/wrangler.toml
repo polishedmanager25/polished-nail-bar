@@ -1,0 +1,8 @@
+name = "polished-chat"
+main = "worker.js"
+compatibility_date = "2026-01-01"
+
+# The API key is NOT set here. Add it in the Cloudflare dashboard:
+#   Workers & Pages > polished-chat > Settings > Variables
+#     ANTHROPIC_API_KEY   (encrypt this one)
+#     ALLOWED_ORIGIN = https://polisheddtla.com
