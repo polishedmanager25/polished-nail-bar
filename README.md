@@ -29,8 +29,8 @@ Two minutes later the site is live on a temporary address like
 
 ### 3. Point your domain at it
 
-1. Buy **polisheddtla.com** (Namecheap, Porkbun, Cloudflare — around $12/year).
-2. In Netlify: **Domain management → Add a domain** → type `polisheddtla.com`.
+1. Buy **polishednailbardtla.com** (Namecheap, Porkbun, Cloudflare — around $12/year).
+2. In Netlify: **Domain management → Add a domain** → type `polishednailbardtla.com`.
 3. Netlify shows you what to change at your registrar. Follow it exactly.
 4. Wait — anywhere from ten minutes to a few hours. HTTPS turns itself on.
 
@@ -43,7 +43,7 @@ Two minutes later the site is live on a temporary address like
 1. Open `src/admin/config.yml` in GitHub and click the pencil to edit.
 2. On line 8, change `YOUR-GITHUB-USERNAME` to your actual GitHub username.
 3. Commit.
-4. Go to **polisheddtla.com/admin**, click **Sign in with GitHub**, approve.
+4. Go to **polishednailbardtla.com/admin**, click **Sign in with GitHub**, approve.
 
 You're in. Bookmark that page. **Add it to your phone's home screen** and it
 behaves like an app.
@@ -71,7 +71,7 @@ Skip this if you want. The site works without it. Come back when ready.
    | Name | Value | Type |
    |---|---|---|
    | `ANTHROPIC_API_KEY` | your key from step 1 | **Encrypt** |
-   | `ALLOWED_ORIGIN` | `https://polisheddtla.com` | Text |
+   | `ALLOWED_ORIGIN` | `https://polishednailbardtla.com` | Text |
 
 5. Copy the Worker's address at the top — it looks like
    `https://polished-chat.something.workers.dev`.
@@ -91,7 +91,7 @@ your site can see it or use it.
 
 ### Changing anything
 
-Go to **polisheddtla.com/admin**, edit, hit **Save**. About a minute later it's
+Go to **polishednailbardtla.com/admin**, edit, hit **Save**. About a minute later it's
 live. That's the whole process. It works from your phone.
 
 What you can change:

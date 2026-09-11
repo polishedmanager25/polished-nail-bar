@@ -2,7 +2,7 @@
   "name": "polished-nail-bar-dtla",
   "version": "1.0.0",
   "private": true,
-  "description": "polisheddtla.com — static site built with Eleventy, edited with Sveltia CMS",
+  "description": "polishednailbardtla.com — static site built with Eleventy, edited with Sveltia CMS",
   "scripts": {
     "start": "eleventy --serve",
     "build": "eleventy"

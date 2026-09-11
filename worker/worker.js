@@ -6,7 +6,7 @@
  *
  * SET THESE IN THE CLOUDFLARE DASHBOARD (Settings > Variables):
  *   ANTHROPIC_API_KEY   secret   your key from console.anthropic.com
- *   ALLOWED_ORIGIN      plain    https://polisheddtla.com
+ *   ALLOWED_ORIGIN      plain    https://polishednailbardtla.com
  */
 
 const MODEL = "claude-haiku-4-5-20251001";
@@ -15,7 +15,7 @@ const MAX_KNOWLEDGE = 60000;
 
 export default {
   async fetch(request, env) {
-    const origin = env.ALLOWED_ORIGIN || "https://polisheddtla.com";
+    const origin = env.ALLOWED_ORIGIN || "https://polishednailbardtla.com";
 
     const cors = {
       "Access-Control-Allow-Origin": origin,
