@@ -5,7 +5,7 @@
 (function () {
   'use strict';
 
-  var WORKER = 'https://polished-chat.YOUR-SUBDOMAIN.workers.dev';
+  var WORKER = 'https://polished-chat.polishedmanager25.workers.dev';
 
   var css = `
   .pc-tag{position:fixed;right:80px;bottom:29px;z-index:199;background:#fff;color:#141414;
