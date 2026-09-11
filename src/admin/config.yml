@@ -4,15 +4,15 @@
 
 backend:
   name: github
-  repo: YOUR-GITHUB-USERNAME/polished-nail-bar
+  repo: polishedmanager25/polished-nail-bar
   branch: main
 
 media_folder: "src/images"
 public_folder: "/images"
 
-site_url: https://polisheddtla.com
-display_url: https://polisheddtla.com
-logo_url: https://polisheddtla.com/images/og.jpg
+site_url: https://polishednailbardtla.com
+display_url: https://polishednailbardtla.com
+logo_url: https://polishednailbardtla.com/images/og.jpg
 
 collections:
   # ---------------------------------------------------------------- PROMOS
