@@ -1,0 +1,174 @@
+---
+layout: base.njk
+title: "Polished Nail Bar DTLA — Luxury Nails & Custom Nail Art in Downtown LA"
+description: "Luxury nail salon in Downtown LA's Historic Core since 2017. GelX, Russian gel, BIAB, acrylic, custom nail art and CBD & 24K Gold pedicures. Book online."
+permalink: /
+---
+<section class="hero on-dark pin">
+  <div class="bgimg ph" data-l="Hero · {{ home.hero_poster }}">
+    <video class="hv hv-fill" autoplay muted loop playsinline preload="metadata" aria-hidden="true" tabindex="-1">
+      <source src="/video/hero.webm" type="video/webm">
+      <source src="/video/hero.mp4" type="video/mp4">
+    </video>
+    <video class="hv hv-fit" autoplay muted loop playsinline preload="metadata"
+           poster="/images/{{ home.hero_poster }}" aria-hidden="true" tabindex="-1">
+      <source src="/video/hero.webm" type="video/webm">
+      <source src="/video/hero.mp4" type="video/mp4">
+    </video>
+    <img src="/images/{{ home.hero_poster }}" alt="A finished custom nail set at Polished Nail Bar in Downtown LA" onerror="this.remove()">
+  </div>
+  <div class="scrim"></div>
+  <div class="hero-in">
+    <div class="hero-top">
+      <span class="u10">{{ site.neighborhood }}</span>
+      <span class="u10">Est. {{ site.established }}</span>
+    </div>
+    <div class="hero-foot">
+      <h1 class="mega">{{ home.hero_line1 }}<br>&amp; <span class="serif">{{ home.hero_italic }}</span> {{ home.hero_line2 }}</h1>
+      <div class="hero-b">
+        <p class="lead">{{ home.hero_lead }}</p>
+        <div class="btns">
+          <a class="btn" href="{{ site.booking_url }}" target="_blank" rel="noopener">Book appointment</a>
+          <a class="btn btn-o" href="/services/">View services</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="band" aria-hidden="true"><div class="t">
+  {%- for pass in [1,2] -%}
+  <span>{{ site.service_band_words }} — <em>{{ site.service_band_accent }}</em> — {{ site.service_band_tail }} — </span>
+  {%- endfor -%}
+</div></div>
+
+<section class="statwrap">
+  <div class="wrap stats">
+    <div class="stat"><span class="u10 mute">Google</span><b>{{ site.google_rating }}</b><span class="u10 mute">{{ site.google_count }}</span></div>
+    <div class="stat"><span class="u10 mute">Yelp</span><b>{{ site.yelp_rating }}</b><span class="u10 mute">{{ site.yelp_count }}</span></div>
+    <div class="stat"><span class="u10 mute">Open since</span><b>{{ site.established }}</b><span class="u10 mute">Historic Core</span></div>
+    <div class="stat"><span class="u10 mute">Parking</span><b>{{ site.parking }}</b><span class="u10 mute">{{ site.parking_note }}</span></div>
+    <div class="stat stat--word stat--hot"><span class="u10">{{ site.rewards_label }}</span><b>{{ site.rewards_name }}</b><span class="u10">{{ site.rewards_note }}</span></div>
+  </div>
+</section>
+
+<section class="split">
+  <div class="ph r45 zoom pan" data-l="Chrome stiletto set · art-detail.jpg"><img src="/images/art-detail.jpg" alt="Chrome and pink custom nail art" onerror="this.remove()"></div>
+  <div class="pane">
+    <span class="u10 mute">01 — Your signature nail work</span>
+    <h2 class="big" style="margin:18px 0 20px">{{ home.craft_heading | safe }}</h2>
+    <p class="lead">{{ home.craft_body }}</p>
+    <div class="btns" style="margin-top:30px"><a class="btn btn-o" href="/gallery/">See the gallery</a></div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="sh rv">
+      <div class="top"><span class="u10 mute">02 — The Menu</span><a class="tl" href="/services/">All services</a></div>
+      <h2 class="big">Best sellers</h2>
+      <p class="say">{{ home.bestsellers_intro }}</p>
+    </div>
+  </div>
+  <div class="g g5 rv">
+    {%- for t in home.tiles %}
+    <a class="tile" href="{{ t.url }}">
+      <div class="ph {{ 'ph2' if loop.index0 % 2 else '' }} r34 zoom" data-l="{{ t.title }} · {{ t.image }}">
+        <img src="/images/{{ t.image }}" alt="{{ t.title }}" onerror="this.remove()"></div>
+      <div class="k"><span class="u9 mute">{{ t.kicker }}</span>
+        <span class="nm"><span class="mid">{{ t.title }}</span><span class="u12">{{ t.price }}</span></span>
+        <p>{{ t.body }}</p></div>
+    </a>
+    {%- endfor %}
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="sh rv">
+      <div class="top"><span class="u10 mute">03 — Pricing</span><a class="tl" href="/services/">Full price menu</a></div>
+      <h2 class="big">Clear pricing,<br>no surprises</h2>
+      <p class="say">Prices vary with length, shape and design complexity. Ask for a quote at the desk and you'll have it before anyone picks up a file.</p>
+    </div>
+    <div class="menu rv">
+      {%- for r in home.featured_prices %}
+      <a class="mrow" href="/services/"><span class="n">{{ r.name }}</span><span class="p">{{ r.price }}</span></a>
+      {%- endfor %}
+    </div>
+    <div class="btns" style="margin-top:34px"><a class="btn" href="/services/">View full menu</a></div>
+  </div>
+</section>
+
+<div class="g g3">
+  {%- for s in home.strip %}
+  <div class="ph r11 zoom pan" data-l="{{ s.label }} · {{ s.image }}"><img src="/images/{{ s.image }}" alt="{{ s.label }}" onerror="this.remove()"></div>
+  {%- endfor %}
+</div>
+
+<section class="sec" style="padding-bottom:0">
+  <div class="wrap">
+    <div class="sh rv" style="border-bottom:0;margin-bottom:18px">
+      <div class="top"><span class="u10 mute">04 — The Portfolio</span><a class="tl" href="{{ site.instagram_url }}" target="_blank" rel="noopener">@polished_dtla</a></div>
+      <h2 class="big">Our stunning work</h2>
+      <p class="say">A look at what leaves our chairs. Follow along for daily inspiration.</p>
+    </div>
+  </div>
+  <div class="g g3 rv">
+    {%- for g in gallery.home %}
+    <div class="ph {{ 'ph2' if loop.index0 % 2 else '' }} r34 zoom" data-l="{{ g.label }} · {{ g.image }}"><img src="/images/{{ g.image }}" alt="{{ g.label }}" onerror="this.remove()"></div>
+    {%- endfor %}
+  </div>
+  <div class="wrap" style="padding-top:22px;padding-bottom:clamp(40px,6vw,80px)"><a class="tl" href="/gallery/">View the full gallery</a></div>
+</section>
+
+<section class="sec">
+  <div class="wrap" style="text-align:center">
+    <span class="u10 mute">05 — Loved since {{ site.established }}</span>
+    <h2 class="big" style="margin:16px auto 26px;max-width:14ch">Real nails.<br>Real clients.</h2>
+    {%- for r in reviews.items %}{% if r.featured %}{% if loop.first %}
+    <p class="qbig quote" style="max-width:24ch;margin-inline:auto">{{ r.quote }}</p>
+    <p class="u10 mute" style="margin-top:16px">{{ r.name }} · {{ r.source }}</p>
+    {% endif %}{% endif %}{%- endfor %}
+    <div style="height:1px;background:var(--rule);margin:30px auto;max-width:420px"></div>
+    <p class="u12">★ {{ site.google_rating }} on Google · {{ site.google_count }}</p>
+    <p class="u12" style="margin-top:8px">★ {{ site.yelp_rating }} on Yelp · {{ site.yelp_count }}</p>
+    <div class="btns" style="margin-top:28px;justify-content:center">
+      <a class="btn btn-o" href="/reviews/">Read all reviews</a></div>
+  </div>
+</section>
+
+<section class="sec dark on-dark">
+  <div class="wrap">
+    <div class="sh rv">
+      <div class="top"><span class="u10 mute">06 — Good to Know</span><a class="tl" href="/faq/">Read the FAQ</a></div>
+      <h2 class="big">More reasons<br>to come in</h2>
+      <p class="say">Small things that make a Downtown visit easier.</p>
+    </div>
+    <div class="g g4 rv" style="gap:clamp(26px,3vw,44px)">
+      {%- for p in home.perks %}
+      <div class="perk"><h3>{{ p.title }}</h3><p>{{ p.body }}</p></div>
+      {%- endfor %}
+    </div>
+    <div class="btns" style="margin-top:36px"><a class="btn" href="/group-booking/">Book your group</a></div>
+  </div>
+</section>
+
+<section class="split">
+  <div class="mapbox">
+    <iframe title="Polished Nail Bar DTLA on Google Maps" loading="lazy" allowfullscreen
+      referrerpolicy="no-referrer-when-downgrade"
+      src="https://www.google.com/maps?q=Polished+Nail+Bar+215+W+6th+St+R-114+Los+Angeles+CA+90014&amp;output=embed"></iframe>
+  </div>
+  <div class="pane">
+    <span class="u10 mute">07 — Visit us at</span>
+    <h2 class="big" style="margin:18px 0 22px">215 W<br>6th Street</h2>
+    <p class="lead">Suite R-114, {{ site.neighborhood }}. Moments from Crypto.com Arena and L.A. Live, Grand Central Market, Little Tokyo and the Arts District.</p>
+    <div style="height:1px;background:var(--rule);margin:26px 0"></div>
+    <p class="u12">{{ site.hours_weekday }}</p>
+    <p class="u12" style="margin-top:8px">{{ site.hours_sunday }}</p>
+    <div class="btns" style="margin-top:28px">
+      <a class="btn" href="{{ site.directions_url }}" target="_blank" rel="noopener">Get directions</a>
+      <a class="btn btn-o" href="tel:{{ site.phone_link }}">Call the salon</a>
+    </div>
+  </div>
+</section>

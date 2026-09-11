@@ -1,0 +1,70 @@
+{
+  "items": [
+    {
+      "quote": "I got a Gel X set and a gel pedicure, and everything turned out absolutely beautiful — the attention to detail was amazing.",
+      "name": "Hiroya H.",
+      "source": "Google",
+      "featured": true
+    },
+    {
+      "quote": "My favorite salon I've been to. The staff made recommendations rather than blindly doing what I thought I needed, and were so attentive to my nail art.",
+      "name": "Lynn A.",
+      "source": "Google",
+      "featured": false
+    },
+    {
+      "quote": "Awesome World Cup–inspired nails and Ari came through — patient and detail-oriented.",
+      "name": "Emily G.",
+      "source": "Yelp Elite",
+      "featured": false
+    },
+    {
+      "quote": "Tracy did such a great job. I asked for solid jelly-like nails and they came out so similar to the picture. I'm super picky and she was so understanding.",
+      "name": "Johanna",
+      "source": "Google",
+      "featured": false
+    },
+    {
+      "quote": "My local nail shop and they truly never disappoint — service, quality, and the feeling of community. Love that they remember me.",
+      "name": "Kevin R.",
+      "source": "Yelp",
+      "featured": false
+    },
+    {
+      "quote": "Sky did a phenomenal job and paid attention to every detail. My first time doing French tips, and I'm in love.",
+      "name": "Em P.",
+      "source": "Yelp",
+      "featured": false
+    },
+    {
+      "quote": "Under new management and it shows — consistent and worth it. No surprise charges at the end; you get exactly what you ask for.",
+      "name": "C.",
+      "source": "Google",
+      "featured": false
+    },
+    {
+      "quote": "I used to come here years ago, and returning was the best decision. Friendly staff and my nails are always perfect.",
+      "name": "Jinette J.",
+      "source": "Yelp",
+      "featured": false
+    },
+    {
+      "quote": "Brought two clients here and we all loved it — gel manicures and pedicures all around.",
+      "name": "Hannah B.",
+      "source": "Yelp",
+      "featured": false
+    },
+    {
+      "quote": "Been coming since the pandemic — always kind, never disappointed with their work.",
+      "name": "Carol P.",
+      "source": "Yelp",
+      "featured": false
+    },
+    {
+      "quote": "Felt welcomed and taken care of the moment I walked in. I love this shop.",
+      "name": "Beaula O.",
+      "source": "Google",
+      "featured": false
+    }
+  ]
+}

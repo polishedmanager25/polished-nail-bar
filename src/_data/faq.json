@@ -1,0 +1,67 @@
+{
+  "groups": [
+    {
+      "heading": "Booking & your appointment",
+      "items": [
+        {
+          "question": "No preferred nail tech?",
+          "answer": "Pick \"Any Polished Team 1\" or \"Any Polished Team 2.\" Not sure? Browse artist portfolios on the booking site."
+        },
+        {
+          "question": "Why does a different tech's name show on my confirmation?",
+          "answer": "\"Any Professional\" auto-assigns a placeholder name. We reassign you to the best available artist, so it may change."
+        },
+        {
+          "question": "Do I book removal separately?",
+          "answer": "No — we handle gel, GelX or acrylic removal during your visit."
+        },
+        {
+          "question": "Not sure which design level to pick?",
+          "answer": "Book any level to hold your time. Tell your artist your vision at the appointment and we'll take it from there."
+        },
+        {
+          "question": "Do you take walk-ins?",
+          "answer": "Appointments are preferred, but walk-ins and same-day are always welcome. Booked ahead? Your time is always honored."
+        },
+        {
+          "question": "What's your cancellation policy?",
+          "answer": "We ask for 24 hours' notice to cancel or reschedule. Full details live on our policies page ."
+        }
+      ]
+    },
+    {
+      "heading": "Services & specialties",
+      "items": [
+        {
+          "question": "What do you specialize in?",
+          "answer": "GelX, hard gel, BIAB, Russian gel, acrylic, custom nail art and luxury pedicures."
+        },
+        {
+          "question": "What makes your pedicures special?",
+          "answer": "Signature CBD and 24K Gold treatments. Watch The Latest for seasonal pedicures, coming soon."
+        },
+        {
+          "question": "Do you take group bookings?",
+          "answer": "Yes — parties and events with special group rates, extended Golden Hours and custom packages. See our group booking page ."
+        },
+        {
+          "question": "Do you sell gift cards?",
+          "answer": "Yes — buy online via the Shop tab on our booking site. They're delivered digitally."
+        }
+      ]
+    },
+    {
+      "heading": "Rewards & getting here",
+      "items": [
+        {
+          "question": "How do cash rewards work?",
+          "answer": "Pay cash and earn digital stamps: a free stamp to sign up, one per $50 spent, $10 off at four stamps — plus $10 off in your birthday month."
+        },
+        {
+          "question": "Do you validate parking?",
+          "answer": "Yes — five hours at Joe's Auto Parks with a $100+ cash purchase. Bring your ticket to the front desk."
+        }
+      ]
+    }
+  ]
+}

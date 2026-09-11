@@ -1,0 +1,20 @@
+---
+layout: base.njk
+---
+<section class="masthead"><div class="wrap">
+  <a class="tl" href="/blog/">← All stories</a>
+  <p class="u10 mute" style="margin-top:26px">{{ kicker }} · The Polished Team · 1 min read</p>
+  <h1 class="big" style="margin-top:14px">{{ title }}</h1>
+</div></section>
+
+<div class="ph r32" data-l="{{ kicker }} · {{ image }}">
+  <img src="/images/{{ image }}" alt="{{ title }}" onerror="this.remove()">
+</div>
+
+<section class="sec wrap pbody">
+  {{ content | safe }}
+  <div class="btns" style="margin-top:32px">
+    <a class="btn" href="{{ site.booking_url }}" target="_blank" rel="noopener">Book now</a>
+    <a class="btn btn-o" href="/blog/">All stories</a>
+  </div>
+</section>

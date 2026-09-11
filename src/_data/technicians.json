@@ -1,0 +1,16 @@
+{
+  "note": "Used by the chat assistant to suggest who suits a service. It returns a short list of matching technicians, then hands off to booking or the text line. It never promises a specific person is available, because it cannot see the calendar.",
+  "list": [
+    { "name": "Ivy",    "specialties": ["Nail art & design", "Gel X", "Hard gel / BIAB", "Acrylic", "Hands only — no pedicures"], "taking_new": true },
+    { "name": "Sky",    "specialties": ["Nail art & design", "Gel X", "Hard gel / BIAB", "Acrylic", "Dip"], "taking_new": true },
+    { "name": "Vivian", "specialties": ["Nail art & design", "Gel X", "Hard gel / BIAB", "Acrylic", "Hands only — no pedicures"], "taking_new": true },
+    { "name": "Leo",    "specialties": ["Nail art & design", "Gel X", "Hard gel / BIAB", "Acrylic", "Dip", "Waxing"], "taking_new": true },
+    { "name": "John",   "specialties": ["Nail art & design", "Gel X", "Hard gel / BIAB", "Acrylic"], "taking_new": true },
+    { "name": "Tracy",  "specialties": ["Nail art & design", "Gel X", "Hard gel / BIAB"], "taking_new": true },
+    { "name": "Ari",    "specialties": ["Nail art & design", "Gel X", "Hard gel / BIAB", "Dip", "Hands only — no pedicures"], "taking_new": true },
+    { "name": "Alice",  "specialties": ["Manicures", "Pedicures", "Dip"], "taking_new": true },
+    { "name": "Lucy",   "specialties": ["Manicures", "Pedicures"], "taking_new": true },
+    { "name": "CK",     "specialties": ["Manicures", "Pedicures", "Waxing"], "taking_new": true },
+    { "name": "Riya",   "specialties": ["Manicures", "Pedicures"], "taking_new": true }
+  ]
+}

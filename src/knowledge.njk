@@ -1,0 +1,57 @@
+---
+permalink: /knowledge.txt
+eleventyExcludeFromCollections: true
+---
+POLISHED NAIL BAR DTLA — SALON KNOWLEDGE
+Generated automatically from the website. Last built: {{ null | buildDate }}
+
+=== THE BASICS ===
+Name: {{ site.name | plain | safe }}
+Open since: {{ site.established }}
+Address: {{ site.address_line1 }}, {{ site.address_line2 }} ({{ site.neighborhood }})
+Phone: {{ site.phone_display }}
+Text: {{ site.text_display }}
+Email: {{ site.email }}
+Hours: {{ site.hours_weekday }} / {{ site.hours_sunday }}
+Book online: {{ site.booking_url }}
+Instagram: {{ site.instagram_url }}
+Ratings: Google {{ site.google_rating }} ({{ site.google_count }}), Yelp {{ site.yelp_rating }} ({{ site.yelp_count }})
+Parking: {{ site.parking }} — {{ site.parking_note | safe }}
+Loyalty: {{ site.rewards_name | plain | safe }} — {{ site.rewards_note | safe }}
+
+=== SERVICES AND PRICES ===
+{% for c in services.categories %}
+-- {{ c.heading | plain | safe }} --{% if c.intro %}
+{{ c.intro | plain | safe }}{% endif %}
+{% for i in c.items %}{{ i.name | plain | safe }}: {{ i.price }}{% if i.note %} — {{ i.note | plain | safe }}{% endif %}
+{% endfor %}{% endfor %}
+
+=== CURRENT PROMOTIONS ===
+{% for p in promos.items | live %}{{ p.title | plain | safe }} ({{ p.kicker | plain | safe }}): {{ p.body | plain | safe }}
+{% endfor %}
+
+=== TECHNICIANS ===
+{{ technicians.note | safe }}
+{% for t in technicians.list %}{% if t.taking_new %}{{ t.name }} — {{ t.specialties | join(", ") | safe }}
+{% endif %}{% endfor %}
+
+=== POLICIES ===
+{% for g in policies.groups %}
+-- {{ g.heading | plain | safe }} --
+{% for i in g.items %}{{ i.heading | plain | safe }}: {{ i.body | plain | safe }}
+{% endfor %}{% endfor %}
+
+=== FREQUENTLY ASKED ===
+{% for g in faq.groups %}{% for q in g.items %}Q: {{ q.question | plain | safe }}
+A: {{ q.answer | plain | safe }}
+{% endfor %}{% endfor %}
+
+=== HOUSE RULES FOR THE ASSISTANT ===
+Tone: {{ chatbot.tone | plain | safe }}
+{{ chatbot.house_rules | safe }}
+
+=== EXTRA KNOWLEDGE ===
+{{ chatbot.extra_knowledge | safe }}
+
+=== HANDOFF ===
+{{ chatbot.handoff_text | plain | safe }}

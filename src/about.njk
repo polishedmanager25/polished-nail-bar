@@ -1,0 +1,108 @@
+---
+layout: base.njk
+title: "About — Luxury Nail Salon in Downtown LA's Historic Core | Polished Nail Bar"
+description: "Polished Nail Bar opened in the Historic Core of Downtown LA in 2017. Licensed artists, custom nail artistry, and a small luxury on every visit."
+permalink: /about/
+---
+<section class="masthead">
+  <div class="wrap">
+    <span class="u10 mute">About · Polished Nail Bar DTLA</span>
+    <h1 class="mega">Polished<br>since 2017</h1>
+    <p class="lead">Custom nail artistry in the Historic Core of Downtown Los Angeles — where a great manicure feels like the small luxury it should be.</p>
+  </div>
+</section>
+
+<div class="ph pin" style="height:clamp(300px,42vw,600px)" data-l="{{ about.film_caption }} · about.mp4">
+  <video class="av" autoplay muted loop playsinline preload="metadata"
+         poster="/images/{{ about.film_poster }}" aria-hidden="true" tabindex="-1">
+    <source src="/video/about.webm" type="video/webm">
+    <source src="/video/about.mp4" type="video/mp4">
+  </video>
+  <img src="/images/{{ about.film_poster }}" alt="Inside Polished Nail Bar, Downtown LA" onerror="this.remove()">
+</div>
+
+<section class="sec wrap">
+  <div class="g g2 grid--air rv">
+    <div><span class="u10 mute">01 — The Story</span>
+      <h2 class="big" style="margin-top:16px">A small luxury,<br>on 6th Street</h2></div>
+    <div>
+      <p class="lead">Opened in 2017 in the Historic Core of Downtown LA, Polished Nail Bar grew from a small nail bar into one of the neighborhood's go-to salons — built on repeat clients, word of mouth, and licensed artists who take real pride in their craft.</p>
+      <p class="lead" style="margin-top:16px">We're still on the same block doing the same thing: honest recommendations, clear pricing, and work that holds up for weeks.</p>
+    </div>
+  </div>
+</section>
+
+<section class="split rev">
+  <div class="ph r45 zoom pan" data-l="{{ about.craft_caption }} · {{ about.craft_image }}"><img src="/images/{{ about.craft_image }}" alt="{{ about.craft_caption }} at Polished Nail Bar" onerror="this.remove()"></div>
+  <div class="pane">
+    <span class="u10 mute">02 — Our Craft</span>
+    <h2 class="big" style="margin:16px 0 18px">What we do</h2>
+    <p class="lead">From a quick, clean gel manicure to a full custom set, our menu covers it all. Nail art is our #1 craft — chrome, cat-eye, ombré, French, 3D art and charms, plus whatever you saved on your feed.</p>
+    <p class="lead" style="margin-top:16px">New to gel, or not sure what to ask for? Bring a photo or just describe the vibe. No question is too basic here, and every service starts with an honest recommendation and clear pricing.</p>
+    <div class="btns"><a class="btn btn-o" href="/services/">View the menu</a></div>
+  </div>
+</section>
+
+<section class="sec wrap">
+  <div class="sh rv">
+    <div class="top"><span class="u10 mute">03 — Techniques</span><a class="tl" href="/services/">All services</a></div>
+    <h2 class="big">Every technique,<br>one standard</h2>
+  </div>
+  <div class="g g3 rv" style="gap:clamp(24px,3vw,40px)">
+    <div class="perk"><h3>GelX Extensions</h3><p>Lightweight, natural finish.</p></div>
+    <div class="perk"><h3>Hard &amp; Russian Gel</h3><p>Structured, long-wear.</p></div>
+    <div class="perk"><h3>BIAB Overlays</h3><p>Strength for natural nails.</p></div>
+    <div class="perk"><h3>Acrylic &amp; Dip</h3><p>Classic durability.</p></div>
+    <div class="perk"><h3>Custom Nail Art</h3><p>Chrome, cat-eye, 3D, charms.</p></div>
+    <div class="perk"><h3>Signature Pedicures</h3><p>CBD and 24K Gold.</p></div>
+  </div>
+</section>
+
+<div class="g g3">
+  {%- for s in about.squares %}
+  <div class="ph r11 zoom" data-l="{{ s.label }} · {{ s.image }}"><img src="/images/{{ s.image }}" alt="{{ s.label }} nail set at Polished Nail Bar" onerror="this.remove()"></div>
+  {%- endfor %}
+</div>
+
+<section class="sec dark on-dark">
+  <div class="wrap">
+    <div class="sh rv">
+      <div class="top"><span class="u10 mute">04 — Good to Know</span><a class="tl" href="/faq/">Read the FAQ</a></div>
+      <h2 class="big">Before you arrive</h2>
+      <p class="say">A few details that make the visit easier.</p>
+    </div>
+    <div class="g g4 rv" style="gap:clamp(24px,3vw,40px)">
+      <div class="perk"><h3>5-Hour Validated Parking</h3><p>At Joe's Auto Parks, 530 S Spring St, with a $100+ cash purchase. Bring your ticket to the front desk.</p></div>
+      <div class="perk"><h3>Cash Rewards, All Digital</h3><p>A free stamp to sign up ($50 head start), a stamp per $50 spent, $10 off at four stamps, plus $10 off in your birthday month.</p></div>
+      <div class="perk"><h3>Buy Now, Pay Later</h3><p>Klarna, Affirm and Afterpay available in person — split your set at checkout.</p></div>
+      <div class="perk"><h3>Groups &amp; Events</h3><p>Bridal parties, birthdays and corporate events — extended hours, custom packages, competitive pricing.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec wrap">
+  <div class="sh rv">
+    <div class="top"><span class="u10 mute">05 — The Team</span><a class="tl" href="/careers/">We're hiring</a></div>
+    <h2 class="big">Great nails,<br>great service</h2>
+    <p class="say">Behind every Polished visit is a hands-on team that's in the salon daily.</p>
+  </div>
+  <div class="g g2 grid--air rv">
+    <p class="lead">Our team greets clients, supports one another, and keeps standards high from the front desk to the pedicure chair. Our artists bring a rare mix of deep experience and fresh energy — some have been shaping nails since before gel was invented.</p>
+    <p class="lead">Alongside them is a new generation pushing their creativity further. Whatever you're after — a timeless classic set or the trend you saw this morning — someone here does it beautifully.</p>
+  </div>
+</section>
+
+<section class="split">
+  <div class="ph r45 zoom pan" data-l="{{ about.visit_caption }} · {{ about.visit_image }}"><img src="/images/{{ about.visit_image }}" alt="{{ about.visit_caption }} at Polished Nail Bar" onerror="this.remove()"></div>
+  <div class="pane">
+    <span class="u10 mute">06 — Visit</span>
+    <h2 class="big" style="margin:16px 0 18px">215 W<br>6th Street</h2>
+    <p class="lead">Suite R-114, Downtown Los Angeles. Moments from Downtown's major hotels, Crypto.com Arena and L.A. Live, the Arts District, Grand Central Market and Little Tokyo.</p>
+    <div class="dl" style="margin-top:28px">
+      <div><dt>Call</dt><dd><a href="tel:+12132660077">213-266-0077</a></dd></div>
+      <div><dt>Text</dt><dd><a href="sms:+13233793469">323-379-3469</a></dd></div>
+      <div><dt>Hours</dt><dd>Mon–Sat 9 AM–7:30 PM · Sun 9 AM–6 PM</dd></div>
+    </div>
+    <div class="btns"><a class="btn" href="https://polisheddtla.glossgenius.com" target="_blank" rel="noopener">Book an appointment</a></div>
+  </div>
+</section>

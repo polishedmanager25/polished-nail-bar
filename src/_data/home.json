@@ -1,0 +1,106 @@
+{
+  "hero_line1": "Luxury nails",
+  "hero_italic": "custom",
+  "hero_line2": "artistry",
+  "hero_lead": "GelX, Russian gel, BIAB, acrylic and the nail art you saved on your feed — done to one standard, with clear pricing before we start.",
+  "hero_poster": "gallery-24.jpg",
+  "craft_heading": "Nail art is<br>our #1 craft",
+  "craft_body": "Chrome, cat-eye, ombré, French, 3D art, charms — whatever you saved on your feed, our artists bring it to life. Bring a photo or just describe the vibe.",
+  "bestsellers_intro": "A full range of sets, done to one standard. These four move fastest — the complete menu, with every length and add-on priced, lives on the services page.",
+  "tiles": [
+    {
+      "kicker": "Best seller",
+      "title": "Gel X",
+      "price": "$65",
+      "body": "Lightweight Après soft-gel tips. Natural feel, four to six weeks.",
+      "image": "svc-gelx.jpg",
+      "url": "/services/"
+    },
+    {
+      "kicker": "Best seller",
+      "title": "24K Gold",
+      "price": "$80",
+      "body": "Our richest pedicure — gold soak, scrub, mask and a gold-cream massage.",
+      "image": "svc-pedicure.jpg",
+      "url": "/services/"
+    },
+    {
+      "kicker": "Our #1 craft",
+      "title": "Nail Art",
+      "price": "$20",
+      "body": "Chrome, cat-eye, ombré, French, 3D art and charms. Priced by design.",
+      "image": "svc-nailart.jpg",
+      "url": "/gallery/"
+    },
+    {
+      "kicker": "Best seller",
+      "title": "Hard Gel",
+      "price": "$70",
+      "body": "Russian & BIAB. The sculpted, grown-out-clean look with real strength.",
+      "image": "svc-hardgel.jpg",
+      "url": "/services/"
+    },
+    {
+      "kicker": "Best seller",
+      "title": "CBD Pedi",
+      "price": "$80",
+      "body": "Kush Queen CBD relief with a paraffin dip and an extended massage.",
+      "image": "svc-cbd.jpg",
+      "url": "/services/"
+    }
+  ],
+  "featured_prices": [
+    {
+      "name": "Basic Gel Manicure",
+      "price": "$45"
+    },
+    {
+      "name": "Heavenly Pedicure",
+      "price": "$61"
+    },
+    {
+      "name": "The Polished Pedicure",
+      "price": "$75"
+    },
+    {
+      "name": "24K Gold Pedicure",
+      "price": "$95"
+    },
+    {
+      "name": "Custom Nail Art",
+      "price": "From $20"
+    }
+  ],
+  "strip": [
+    {
+      "label": "Cow print French",
+      "image": "home-01.jpg"
+    },
+    {
+      "label": "Neon leopard",
+      "image": "home-02.jpg"
+    },
+    {
+      "label": "Dots & terracotta",
+      "image": "home-03.jpg"
+    }
+  ],
+  "perks": [
+    {
+      "title": "5-Hour Validated Parking",
+      "body": "At Joe's Auto Parks with a $100+ cash purchase. No meter anxiety."
+    },
+    {
+      "title": "Digital Cash Rewards",
+      "body": "Pay cash and earn — a $50 head start, then $10 off as you go."
+    },
+    {
+      "title": "Buy Now, Pay Later",
+      "body": "Klarna, Affirm and Afterpay available in person."
+    },
+    {
+      "title": "Groups & Events",
+      "body": "Bridal, birthdays and corporate — extended Golden Hours by request."
+    }
+  ]
+}

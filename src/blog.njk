@@ -1,0 +1,45 @@
+---
+layout: base.njk
+title: "The Journal — Nail Tips & DTLA Guides | Polished Nail Bar DTLA"
+description: "Notes, tips and Downtown LA guides from the Polished team."
+permalink: /blog/
+---
+<section class="masthead">
+  <div class="wrap">
+    <span class="u10 mute">The Journal · {{ site.name }}</span>
+    <h1 class="mega">Notes, tips<br>&amp; guides</h1>
+    <p class="lead">Short reads from the Polished team — what lasts, what to ask for, and how to keep a set looking new between visits.</p>
+  </div>
+</section>
+
+{% set posts = collections.posts %}
+{% set featured = posts | first %}
+
+<a href="{{ featured.url }}" class="split">
+  <div class="ph nocrop zoom" data-l="{{ featured.data.kicker }} · {{ featured.data.image }}">
+    <img src="/images/{{ featured.data.image }}" alt="{{ featured.data.title }}" onerror="this.remove()"></div>
+  <div class="pane">
+    <span class="u10 mute">Featured · {{ featured.data.kicker }} · 1 min read</span>
+    <h2 class="big" style="margin:16px 0 18px">{{ featured.data.title }}</h2>
+    <p class="lead">{{ featured.data.blurb }}</p>
+    <p style="margin-top:26px"><span class="tl">Read the story</span></p>
+  </div>
+</a>
+
+<section class="sec wrap">
+  <div class="sh rv">
+    <div class="top"><span class="u10 mute">All stories</span><span class="u10 mute">{{ posts.length - 1 }} more</span></div>
+    <h2 class="big">From the journal</h2>
+  </div>
+  <div class="g g3 rv" style="gap:clamp(26px,3vw,44px)">
+    {%- for p in posts %}{% if not loop.first %}
+    <a class="tile plain" href="{{ p.url }}">
+      <div class="ph r32 zoom" data-l="{{ p.data.kicker }} · {{ p.data.image }}">
+        <img src="/images/{{ p.data.image }}" alt="{{ p.data.title }}" onerror="this.remove()"></div>
+      <div class="k"><span class="u9 mute">{{ p.data.kicker }} · 1 min read</span>
+        <span class="nm"><span class="mid">{{ p.data.title }}</span></span>
+        <p>{{ p.data.blurb }}</p></div>
+    </a>
+    {% endif %}{%- endfor %}
+  </div>
+</section>

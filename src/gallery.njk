@@ -1,0 +1,47 @@
+---
+layout: base.njk
+title: "Gallery — Custom Nail Art & Signature Sets | Polished Nail Bar DTLA"
+description: "Chrome, cat-eye, ombre, French, 3D art and charms. The custom nail art and signature sets leaving our chairs in Downtown LA."
+permalink: /gallery/
+---
+<section class="masthead">
+  <div class="wrap">
+    <span class="u10 mute">Gallery · Polished Nail Bar DTLA</span>
+    <h1 class="mega">Our stunning<br>work</h1>
+    <p class="lead">Nail art is our #1 craft. Chrome, cat-eye, ombré, French, 3D art, charms — whatever you saved on your feed. Bring a photo or just describe the vibe.</p>
+    <div class="btns">
+      <a class="btn" href="https://polisheddtla.glossgenius.com" target="_blank" rel="noopener">Book your set</a>
+      <a class="btn btn-o" href="https://www.instagram.com/polished_dtla/" target="_blank" rel="noopener">Follow @polished_dtla</a>
+    </div>
+  </div>
+</section>
+
+
+<section class="sec--flush" style="padding-top:2px">
+<div class="g g3">
+  {%- for g in gallery.full %}
+  <div class="ph r34 zoom" data-l="{{ g.label }} · {{ g.image }}">
+    <img src="/images/{{ g.image }}" alt="{{ g.label }} nail set at Polished Nail Bar" onerror="this.remove()">
+  </div>
+  {%- endfor %}
+</div>
+</section>
+
+<div class="band" aria-hidden="true"><div class="t">
+  <span>Chrome — Cat-Eye — Ombré — French — <em>3D Art</em> — Charms — </span>
+  <span>Chrome — Cat-Eye — Ombré — French — <em>3D Art</em> — Charms — </span>
+</div></div>
+
+<section class="sec wrap">
+  <div class="g g2 grid--air rv">
+    <div><span class="u10 mute">Daily inspiration</span>
+      <h2 class="big" style="margin-top:16px">The feed moves faster<br>than this page</h2></div>
+    <div>
+      <p class="lead">New sets land on Instagram first. Follow @polished_dtla for daily work from the Historic Core, then bring the screenshot with you — genuinely the easiest way to book the set you want.</p>
+      <div class="btns">
+        <a class="btn" href="https://www.instagram.com/polished_dtla/" target="_blank" rel="noopener">Follow @polished_dtla</a>
+        <a class="btn btn-o" href="/services/">Nail art pricing</a>
+      </div>
+    </div>
+  </div>
+</section>

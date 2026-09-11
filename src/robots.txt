@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://polisheddtla.com/sitemap.xml

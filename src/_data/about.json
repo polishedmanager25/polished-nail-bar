@@ -1,0 +1,22 @@
+{
+  "film_poster": "about-01.jpg",
+  "film_caption": "About film",
+  "craft_image": "art-detail.jpg",
+  "craft_caption": "Chrome set",
+  "squares": [
+    {
+      "label": "Emerald chrome French",
+      "image": "about-01.jpg"
+    },
+    {
+      "label": "Pink chrome & crystals",
+      "image": "about-02.jpg"
+    },
+    {
+      "label": "Rainbow ombre",
+      "image": "about-03.jpg"
+    }
+  ],
+  "visit_image": "about-02.jpg",
+  "visit_caption": "Client work"
+}

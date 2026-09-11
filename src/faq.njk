@@ -1,0 +1,40 @@
+---
+layout: base.njk
+title: "FAQ — Booking, Rewards, Parking & More | Polished Nail Bar DTLA"
+description: "Answers on booking, choosing a nail tech, cash rewards, validated parking, walk-ins, gift cards and group bookings."
+permalink: /faq/
+---
+<section class="masthead">
+  <div class="wrap">
+    <span class="u10 mute">FAQ · {{ site.name }}</span>
+    <h1 class="mega">Before<br>your visit</h1>
+    <p class="lead">Booking, rewards, parking and everything else people ask at the desk. Still stuck? Call, text or email — details at the bottom.</p>
+  </div>
+</section>
+
+{% for g in faq.groups %}
+<section class="sec wrap"{% if not loop.first %} style="padding-top:0"{% endif %}>
+  <div class="sh rv">
+    <div class="top"><span class="u10 mute">{{ "0" + (loop.index | string) }} — {{ g.heading }}</span></div>
+    <h2 class="big">{{ g.heading }}</h2>
+  </div>
+  <div class="acc rv">
+    {%- for q in g.items %}
+    <div class="acc-i{% if loop.first and g.items.length %} open{% endif %}">
+      <button class="acc-b" type="button" aria-expanded="{{ 'true' if loop.first else 'false' }}">{{ q.question }}<span class="sg"></span></button>
+      <div class="acc-p"><p>{{ q.answer | safe }}</p></div>
+    </div>
+    {%- endfor %}
+  </div>
+</section>
+{% endfor %}
+
+<section class="sec wrap" style="padding-top:0">
+  <div class="dl rv">
+    <div><dt>Still have a question?</dt><dd>
+      <a href="tel:{{ site.phone_link }}">Call {{ site.phone_display }}</a> ·
+      <a href="sms:{{ site.text_link }}">Text {{ site.text_display }}</a> ·
+      <a href="mailto:{{ site.email }}">{{ site.email }}</a></dd></div>
+  </div>
+  <div class="btns"><a class="btn" href="{{ site.booking_url }}" target="_blank" rel="noopener">Book an appointment</a></div>
+</section>

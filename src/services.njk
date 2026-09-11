@@ -1,0 +1,52 @@
+---
+layout: base.njk
+title: "Services & Price Menu — Polished Nail Bar DTLA"
+description: "Full service menu and clear pricing: manicures, luxury pedicures, GelX, hard gel, BIAB, acrylic, dip, custom nail art and waxing in Downtown LA."
+permalink: /services/
+---
+<section class="masthead">
+  <div class="wrap">
+    <span class="u10 mute">Services · {{ site.name }}</span>
+    <h1 class="mega">The full menu</h1>
+    <p class="lead">GelX, Russian gel, BIAB, acrylic, dip, custom nail art and luxury pedicures — every technique, done to one standard, with clear pricing before we start.</p>
+    <div class="tags">
+      {%- for c in services.categories -%}<span class="u10">{{ c.heading }}</span>{%- endfor -%}
+    </div>
+    <div class="btns">
+      <a class="btn" href="{{ site.booking_services_url }}" target="_blank" rel="noopener">Book a service</a>
+      <a class="btn btn-o" href="/faq/">Not sure what to book?</a>
+    </div>
+  </div>
+</section>
+
+<div class="band" aria-hidden="true"><div class="t">
+  {%- for pass in [1,2] -%}
+  <span>{{ site.service_band_words }} — <em>{{ site.service_band_accent }}</em> — {{ site.service_band_tail }} — </span>
+  {%- endfor -%}
+</div></div>
+
+{% for c in services.categories %}
+<section class="sec wrap">
+  <div class="sh rv">
+    <div class="top"><span class="u10 mute">{{ c.label }}</span></div>
+    <h2 class="big">{{ c.heading }}</h2>
+    {% if c.intro %}<p class="say">{{ c.intro }}</p>{% endif %}
+  </div>
+  {%- set twoPrice = false -%}
+  {%- for i in c.items %}{% if "|" in i.price %}{% set twoPrice = true %}{% endif %}{% endfor -%}
+  {% if twoPrice %}<div class="pricekey rv"><span>Base | Gel</span></div>{% endif %}
+  <div class="menu tight rv">
+    {%- for i in c.items %}
+    <div class="mrow">
+      <span class="n">{% if i.tag %}<span class="tag">{{ i.tag }}</span>{% endif %}{{ i.name }}</span>
+      <span class="p">{{ i.price }}</span>
+      {%- if i.note %}<span class="ds">{{ i.note }}</span>{% endif -%}
+    </div>
+    {%- endfor %}
+  </div>
+</section>
+{% endfor %}
+
+<section class="sec wrap" style="padding-top:0">
+  <p class="fine">Prices vary with nail length, shape, condition, design complexity and product usage. Ask for a quote before your service begins — full terms are on the <a href="/policies/">policies page</a>.</p>
+</section>

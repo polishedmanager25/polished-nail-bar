@@ -1,0 +1,34 @@
+---
+layout: base.njk
+title: "Salon Policies & Service Agreement | Polished Nail Bar DTLA"
+description: "Payment, appointments, our 7-Day Salon Guarantee, health and safety, and the full service agreement for Polished Nail Bar DTLA."
+permalink: /policies/
+---
+<section class="masthead">
+  <div class="wrap">
+    <span class="u10 mute">Policies · {{ site.name }}</span>
+    <h1 class="mega">The fine print</h1>
+    <p class="lead">Clear terms so every visit is smooth, safe and exactly what you expect. By booking or receiving services at Polished Nail Bar, you agree to the policies below.</p>
+  </div>
+</section>
+
+{% for g in policies.groups %}
+<section class="sec wrap"{% if not loop.first %} style="padding-top:0"{% endif %}>
+  <div class="sh rv">
+    <div class="top"><span class="u10 mute">{{ "0" + (loop.index | string) }} — {{ g.heading }}</span></div>
+    <h2 class="big">{{ g.heading }}</h2>
+  </div>
+  <div class="acc rv">
+    {%- for it in g.items %}
+    <div class="acc-i{% if loop.first %} open{% endif %}">
+      <button class="acc-b" type="button" aria-expanded="{{ 'true' if loop.first else 'false' }}">{{ it.heading }}<span class="sg"></span></button>
+      <div class="acc-p">{% for para in it.body.split('\n\n') %}<p>{{ para | safe }}</p>{% endfor %}</div>
+    </div>
+    {%- endfor %}
+  </div>
+</section>
+{% endfor %}
+
+<section class="sec wrap" style="padding-top:0">
+  <p class="fine">Business inquiries: <a href="mailto:{{ site.email }}">{{ site.email }}</a>. Policies, pricing, promotions and guarantees are subject to change without notice.</p>
+</section>

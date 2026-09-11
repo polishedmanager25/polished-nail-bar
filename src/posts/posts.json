@@ -1,0 +1,5 @@
+{
+  "layout": "post.njk",
+  "permalink": "/blog/{{ page.fileSlug | slug }}/",
+  "description": "Notes and tips from the Polished Nail Bar team in Downtown LA."
+}

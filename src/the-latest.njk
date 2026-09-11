@@ -1,0 +1,57 @@
+---
+layout: base.njk
+title: "The Latest — Promotions, Seasonal Pedicures & Updates | Polished Nail Bar DTLA"
+description: "Promotions, seasonal pedicures, rewards and salon updates from Polished Nail Bar in Downtown LA's Historic Core."
+permalink: /the-latest/
+---
+<section class="masthead">
+  <div class="wrap">
+    <span class="u10 mute">The Latest · {{ site.neighborhood }} · Est. {{ site.established }}</span>
+    <h1 class="mega">The latest</h1>
+    <p class="lead">Promos, seasonal pedicures, and the little updates worth knowing — straight from the Historic Core.</p>
+  </div>
+</section>
+
+<section class="sec wrap">
+  <div class="sh rv">
+    <div class="top"><span class="u10 mute">Latest updates</span><span class="u10 mute">Filter below</span></div>
+    <h2 class="big">Everything current</h2>
+    <p class="say">Promos, seasonal launches, rewards and events. Filter to what you're after.</p>
+  </div>
+
+  {%- set live = promos.items | live -%}
+  {%- set tags = [] -%}
+  {%- for t in ["seasonal","rewards","promos","events","new"] -%}
+    {%- for p in live -%}{% if t in p.tags and t not in tags %}{% set tags = (tags.push(t), tags) %}{% endif %}{%- endfor -%}
+  {%- endfor -%}
+  <div class="chips rv" data-filter-bar>
+    <button class="chip" type="button" data-filter="all" aria-pressed="true">All</button>
+    {%- for t in tags %}
+    <button class="chip" type="button" data-filter="{{ t }}" aria-pressed="false">{{ t | capitalize }}</button>
+    {%- endfor %}
+  </div>
+
+  <div class="g g3 rv" style="gap:clamp(26px,3vw,44px)">
+    {%- for p in promos.items | live %}
+    <article class="tile plain" data-tags="{{ p.tags | join(' ') }}">
+      <div class="ph r23 zoom" data-l="{{ p.title }} · {{ p.image }}">
+        <img src="/images/{{ p.image }}" alt="{{ p.title }}" onerror="this.remove()">
+      </div>
+      <div class="k"><span class="u9 mute">{{ p.kicker }}</span>
+        <span class="nm"><span class="mid">{{ p.title }}</span></span>
+        <p>{{ p.body }}</p></div>
+    </article>
+    {%- endfor %}
+  </div>
+</section>
+
+<section class="sec dark on-dark">
+  <div class="wrap" style="text-align:center">
+    <span class="u10 mute">Instagram</span>
+    <h2 class="big" style="margin:16px auto 16px;max-width:20ch">Never miss a drop</h2>
+    <p class="lead" style="margin-inline:auto">It lands on Instagram first — seasonal launches, last-minute openings, and the work leaving our chairs that day.</p>
+    <div class="btns" style="justify-content:center">
+      <a class="btn" href="{{ site.instagram_url }}" target="_blank" rel="noopener">Follow @polished_dtla</a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,89 @@
+{
+  "groups": [
+    {
+      "heading": "Payment & pricing",
+      "items": [
+        {
+          "heading": "All sales are final",
+          "body": "No refunds on services, products, gift cards, deposits or prepaid packages."
+        },
+        {
+          "heading": "How pricing is set",
+          "body": "Prices vary by nail length, shape, condition, design complexity and product usage. Request a quote before your service begins; without one, you accept the service pricing."
+        },
+        {
+          "heading": "Cash rewards & validated parking",
+          "body": "Pay with cash and earn rewards through our Cash Loyalty Program. Validated parking of up to five hours is available with qualifying cash payments of $100+."
+        },
+        {
+          "heading": "Payment in advance",
+          "body": "We may require full payment before service for any service totaling $80+, and for all appointments after 6 PM Monday to Saturday, or after 5 PM on Sunday."
+        },
+        {
+          "heading": "What we accept",
+          "body": "Major credit and debit cards, cash, and Buy Now Pay Later via Klarna, Affirm and Afterpay. Gratuities are appreciated via cash or your technician's Zelle or Venmo."
+        }
+      ]
+    },
+    {
+      "heading": "Appointments",
+      "items": [
+        {
+          "heading": "Arriving on time",
+          "body": "Please arrive on time. Late arrivals may result in a shortened or rescheduled service."
+        },
+        {
+          "heading": "Cancellations & changes",
+          "body": "We kindly request 24 hours' notice for cancellations or changes. Less than 24 hours' notice may result in a fee, or a required deposit for future appointments.\n\nGroup bookings follow a separate 48-hour policy — see the group booking page ."
+        }
+      ]
+    },
+    {
+      "heading": "Our 7-day salon guarantee",
+      "items": [
+        {
+          "heading": "What's covered",
+          "body": "We proudly offer a 7-Day Salon Guarantee on qualifying services. It excludes regular polish, polish changes, refills, accidental damage, misuse, normal wear and natural growth."
+        },
+        {
+          "heading": "How to claim",
+          "body": "Contact us within seven days of a workmanship issue so we can evaluate and, if appropriate, correct the service. Please inspect your nails before leaving the salon."
+        }
+      ]
+    },
+    {
+      "heading": "Health & safety",
+      "items": [
+        {
+          "heading": "Declining service",
+          "body": "We reserve the right to decline services if signs of infection, fungus, open wounds or contagious conditions are present."
+        },
+        {
+          "heading": "Allergies & sensitivities",
+          "body": "Please inform your technician of any allergies, medical conditions or sensitivities before your service begins."
+        }
+      ]
+    },
+    {
+      "heading": "Photography, children & belongings",
+      "items": [
+        {
+          "heading": "Photography & video",
+          "body": "Photos and video for personal use are welcome. Recording staff, guests or operations for commercial use requires prior approval."
+        },
+        {
+          "heading": "Children",
+          "body": "Children are welcome but must be supervised at all times. Running or climbing is not permitted."
+        },
+        {
+          "heading": "Belongings",
+          "body": "Please keep your belongings with you — we're not responsible for lost, stolen or damaged items."
+        },
+        {
+          "heading": "Right to refuse & satisfaction",
+          "body": "We reserve the right to refuse or discontinue service for inappropriate behavior, health or safety concerns, or failure to follow policies.\n\nIf you have any concerns, please notify us before leaving so we can address them promptly. ClassPass guests are welcome — some pricing and policies may differ."
+        }
+      ]
+    }
+  ]
+}

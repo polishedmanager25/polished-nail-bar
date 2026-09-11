@@ -1,0 +1,237 @@
+{
+  "categories": [
+    {
+      "label": "01 — Manicure",
+      "heading": "Manicure",
+      "intro": "Every manicure includes trim, shape, cleanse, cuticle care and your choice of color. Gel pricing is the second figure.",
+      "items": [
+        {
+          "name": "Basic Manicure",
+          "tag": "",
+          "price": "$25 | $45",
+          "note": "Trim, shape, cleanse, cuticle care, a quick massage, and your choice of color."
+        },
+        {
+          "name": "Heavenly Manicure",
+          "tag": "",
+          "price": "$40 | $55",
+          "note": "Everything in the Basic, plus a sugar sea-salt scrub, hot towel and massage."
+        },
+        {
+          "name": "Luxury Manicure",
+          "tag": "",
+          "price": "$50 | $65",
+          "note": "Deep-hydration pampering on the Heavenly, plus a paraffin dip and a longer scented massage."
+        },
+        {
+          "name": "CBD Manicure",
+          "tag": "",
+          "price": "$60 | $75",
+          "note": "Targeted relief for sore muscles using Kush Queen CBD, with paraffin dip and extended massage."
+        },
+        {
+          "name": "24K Gold Manicure",
+          "tag": "",
+          "price": "$60 | $75",
+          "note": "Gold-infused rose-petal soak, gold sugar scrub, gold mask, and a steam-activated gold-cream massage."
+        }
+      ]
+    },
+    {
+      "label": "02 — Pedicure",
+      "heading": "Pedicure",
+      "intro": "Our signature category. CBD and 24K Gold are the two to know.",
+      "items": [
+        {
+          "name": "Basic Pedicure",
+          "tag": "",
+          "price": "$35 | $48",
+          "note": "The Basic treatment for feet, plus a light foot scrub."
+        },
+        {
+          "name": "Heavenly Pedicure",
+          "tag": "",
+          "price": "$50 | $61",
+          "note": "Sugar sea-salt scrub, hot towel, callus removal and massage."
+        },
+        {
+          "name": "Luxury Pedicure",
+          "tag": "Popular",
+          "price": "$65 | $80",
+          "note": "Heavenly pampering plus a restorative leg mask and a longer scented massage."
+        },
+        {
+          "name": "The Polished Pedicure — Signature",
+          "tag": "Best seller",
+          "price": "$75 | $90",
+          "note": "Everything in the Luxury Pedi, plus a paraffin wax dip and extended massage. Scents: mint, lavender, pearl, green tea, orange or collagen."
+        },
+        {
+          "name": "CBD Pedicure",
+          "tag": "Best seller",
+          "price": "$80 | $95",
+          "note": "Kush Queen CBD relief with a paraffin dip and extended massage."
+        },
+        {
+          "name": "24K Gold Pedicure",
+          "tag": "Best seller",
+          "price": "$80 | $95",
+          "note": "Our richest treatment — gold soak, scrub, mask, gold-cream massage and paraffin dip."
+        }
+      ]
+    },
+    {
+      "label": "03 — Nail Sets",
+      "heading": "Sets & enhancements",
+      "intro": "Every length is listed so there is nothing to work out at the desk.",
+      "items": [
+        {
+          "name": "Gel X",
+          "tag": "Best seller",
+          "price": "From $65",
+          "note": "Après soft-gel tips — the original number one brand. Lightweight, natural, four to six weeks. Short $65 · Med $70 · Long $75 · X-L $80 · 2X-L $85 · 3X-L $90 · 4X-L $100 · 5X-L $130 · Special $80+ · On toes $65."
+        },
+        {
+          "name": "Hard Gel · Builder · Russian · BIAB",
+          "tag": "Best seller",
+          "price": "From $70",
+          "note": "The strongest overlay for natural nails — protects and promotes healthy growth. Short & Med $70 · Long $80+ · X-L $85+ · On toes $70."
+        },
+        {
+          "name": "BIAB Manicure for Him",
+          "tag": "Best seller",
+          "price": "From $70",
+          "note": "Sharp, clean, masculine nails with a durable Builder-In-A-Bottle overlay."
+        },
+        {
+          "name": "Acrylic Full Set",
+          "tag": "",
+          "price": "From $70",
+          "note": "The durable classic, fully customizable. Add color powder for a matte finish (+$10). Short $70 · Med $75 · Long $90+ · XL $120+ · Longest $150."
+        },
+        {
+          "name": "Dipping Powder",
+          "tag": "",
+          "price": "From $65",
+          "note": "Powder overlay for natural nails, short and medium. Base dip with gel color $65 · Color dip $70 · Tips $75+."
+        },
+        {
+          "name": "Refill — Acrylic, Gel X or Hard Gel",
+          "tag": "",
+          "price": "$60+",
+          "note": "Maintenance for any set, gel color included. Toe refills available."
+        }
+      ]
+    },
+    {
+      "label": "05 — Add-ons",
+      "heading": "Add-ons & polish",
+      "intro": "",
+      "items": [
+        {
+          "name": "Special, Jelly or Matte Top",
+          "tag": "",
+          "price": "$5",
+          "note": ""
+        },
+        {
+          "name": "Shape Change or Cuticle Care",
+          "tag": "",
+          "price": "$5",
+          "note": ""
+        },
+        {
+          "name": "Set Removal (with / without)",
+          "tag": "",
+          "price": "$10+ / $15+",
+          "note": ""
+        },
+        {
+          "name": "Nail Fix",
+          "tag": "",
+          "price": "$8+ per nail",
+          "note": ""
+        },
+        {
+          "name": "Shiny Buff",
+          "tag": "",
+          "price": "$5",
+          "note": ""
+        },
+        {
+          "name": "Polish Change — Gel Enhancement",
+          "tag": "",
+          "price": "$40",
+          "note": ""
+        },
+        {
+          "name": "Polish Change — Gel Mani/Pedi",
+          "tag": "",
+          "price": "$30",
+          "note": ""
+        },
+        {
+          "name": "Polish Change — Regular",
+          "tag": "",
+          "price": "$20",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "label": "06 — Waxing",
+      "heading": "Waxing",
+      "intro": "",
+      "items": [
+        {
+          "name": "Eyebrows",
+          "tag": "",
+          "price": "$15",
+          "note": ""
+        },
+        {
+          "name": "Upper Lip",
+          "tag": "",
+          "price": "$10",
+          "note": ""
+        },
+        {
+          "name": "Chin",
+          "tag": "",
+          "price": "$15+",
+          "note": ""
+        },
+        {
+          "name": "Full Face",
+          "tag": "",
+          "price": "$65+",
+          "note": ""
+        },
+        {
+          "name": "Full / Half Arms",
+          "tag": "",
+          "price": "$45+ / $30+",
+          "note": ""
+        },
+        {
+          "name": "Full / Half Legs",
+          "tag": "",
+          "price": "$60+ / $35+",
+          "note": ""
+        },
+        {
+          "name": "Bikini / Brazilian",
+          "tag": "",
+          "price": "$35+ / $60+",
+          "note": ""
+        },
+        {
+          "name": "Back / Chest",
+          "tag": "",
+          "price": "$60+ / $45+",
+          "note": ""
+        }
+      ]
+    }
+  ]
+}

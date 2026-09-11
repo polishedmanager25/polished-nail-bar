@@ -1,0 +1,14 @@
+[
+  { "label": "Home",          "url": "/" },
+  { "label": "Services",      "url": "/services/" },
+  { "label": "About",         "url": "/about/" },
+  { "label": "Gallery",       "url": "/gallery/" },
+  { "label": "Reviews",       "url": "/reviews/" },
+  { "label": "Group Booking", "url": "/group-booking/" },
+  { "label": "The Latest",    "url": "/the-latest/" },
+  { "label": "Journal",       "url": "/blog/" },
+  { "label": "Careers",       "url": "/careers/" },
+  { "label": "Policies",      "url": "/policies/" },
+  { "label": "FAQ",           "url": "/faq/" },
+  { "label": "Contact",       "url": "/contact/" }
+]
