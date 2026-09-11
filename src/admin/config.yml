@@ -103,6 +103,7 @@ collections:
           - { name: text_display, label: "Text number (as shown)", widget: string }
           - { name: text_link, label: "Text number (dial format)", widget: string }
           - { name: email, label: "Email", widget: string }
+          - { name: ga_id, label: "Google Analytics ID", widget: string, required: false, hint: "Starts with G-. Leave blank to turn tracking off." }
           - { name: address_line1, label: "Street address", widget: string }
           - { name: address_line2, label: "City, state, ZIP", widget: string }
           - { name: neighborhood, label: "Neighborhood", widget: string }
