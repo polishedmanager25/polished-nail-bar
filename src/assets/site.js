@@ -11,8 +11,14 @@
     document.body.style.overflow = open ? 'hidden' : '';
   }
   document.addEventListener('click', function (e) {
-    if (e.target.closest('[data-menu-open]'))  { e.preventDefault(); setDrawer(true); }
-    if (e.target.closest('[data-menu-close]')) { e.preventDefault(); setDrawer(false); }
+    if (e.target.closest('[data-menu-open]')) { e.preventDefault(); setDrawer(true); }
+    var closer = e.target.closest('[data-menu-close]');
+    if (closer) {
+      // the Close button must not navigate; a nav link must. Only cancel
+      // the default for non-links, otherwise the tap never leaves the page.
+      if (closer.tagName !== 'A') e.preventDefault();
+      setDrawer(false);
+    }
   });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setDrawer(false); });
 
