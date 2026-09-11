@@ -2,8 +2,8 @@
   "items": [
     {
       "live": true,
+      "title": "K-Beauty for your pedicure",
       "kicker": "New · Coming soon",
-      "title": "K-Beauty for your feet",
       "body": "Coming soon. Korean-inspired care for radiant, healthy feet — deep hydration, brighter skin and nourishing K-beauty ingredients. Free collagen hand mask with every K-Beauty pedicure.",
       "tags": [
         "new",
@@ -13,8 +13,8 @@
     },
     {
       "live": true,
-      "kicker": "Rewards · New clients",
       "title": "The $50 head start",
+      "kicker": "Rewards · New clients",
       "body": "Join our digital cash-rewards program and start ahead — a stamp per $50, $10 off at four, all on your phone.",
       "tags": [
         "rewards",
@@ -25,8 +25,8 @@
     },
     {
       "live": true,
-      "kicker": "Parking · Always on",
       "title": "Five hours, validated",
+      "kicker": "Parking · Always on",
       "body": "Spend $100+ in cash and we validate five hours at Joe's Auto Parks. No meter math, no circling.",
       "tags": [
         "promos"
@@ -35,8 +35,8 @@
     },
     {
       "live": true,
-      "kicker": "Rewards · Every year",
       "title": "Birthday month = $10 off",
+      "kicker": "Rewards · Every year",
       "body": "A little treat, on us — $10 off during your birthday month. Join the loyalty program at least 30 days before your birthday month to claim it.",
       "tags": [
         "rewards",
