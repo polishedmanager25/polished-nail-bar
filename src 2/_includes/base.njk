@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light only">
+{%- if site.ga_id %}
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.ga_id }}"></script>
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());gtag('config','{{ site.ga_id }}');
+</script>
+{%- endif %}
+<title>{{ title }}</title>
+<meta name="description" content="{{ description }}">
+<link rel="canonical" href="https://polishednailbardtla.com{{ page.url }}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{ site.name }}">
+<meta property="og:title" content="{{ title }}">
+<meta property="og:description" content="{{ description }}">
+<meta property="og:url" content="https://polishednailbardtla.com{{ page.url }}">
+<meta property="og:image" content="https://polishednailbardtla.com/images/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Bodoni+Moda:ital,opsz,wght@1,6..96,400&display=swap" rel="stylesheet">
+<link rel="icon" href="/images/favicon.png" sizes="any">
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="stylesheet" href="/assets/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NailSalon",
+  "@id": "https://polishednailbardtla.com/#salon",
+  "name": "{{ site.name }}",
+  "url": "https://polishednailbardtla.com/",
+  "telephone": "{{ site.phone_link }}",
+  "email": "{{ site.email }}",
+  "foundingDate": "{{ site.established }}",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "{{ site.address_line1 }}",
+    "addressLocality": "Los Angeles",
+    "addressRegion": "CA",
+    "postalCode": "90014",
+    "addressCountry": "US"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 34.0459, "longitude": -118.2508 },
+  "sameAs": ["{{ site.instagram_url }}", "{{ site.yelp_url }}"],
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+      "opens": "09:00", "closes": "19:30" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday",
+      "opens": "09:00", "closes": "18:00" }
+  ]
+}
+</script>
+{% if schema %}<script type="application/ld+json">{{ schema | safe }}</script>{% endif %}
+</head>
+<body>
+
+<a href="#main" class="u11" style="position:absolute;left:-9999px" onfocus="this.style.cssText='position:fixed;left:12px;top:12px;z-index:999;background:#000;color:#fff;padding:10px 16px'">Skip to content</a>
+
+<header class="top">
+  <div class="promo" aria-hidden="true">
+    <div class="metal"></div>
+    <div class="t">
+      {%- for pass in [1,2] -%}
+        {%- for line in site.promo_bar -%}
+          <span>{{ line | safe }}<i> ✦ </i></span>
+        {%- endfor -%}
+      {%- endfor -%}
+    </div>
+  </div>
+
+  <div class="top-r">
+    <div class="top-l">
+      <button class="bg" type="button" data-menu-open aria-label="Open menu" aria-controls="dw"><span></span><span></span><span></span></button>
+      <a class="u11" href="tel:{{ site.phone_link }}">{{ site.phone_display }}</a>
+    </div>
+    <a class="mark" href="/" aria-label="{{ site.name }} — home"><b>Polished</b><i>Nail Bar · DTLA</i></a>
+    <div class="top-e">
+      <a class="u11" href="/the-latest/">The Latest</a>
+      <a class="tl" href="{{ site.booking_url }}" target="_blank" rel="noopener">Book</a>
+    </div>
+  </div>
+
+  <nav class="cats" aria-label="Primary"><ul>
+    {%- for item in nav -%}
+    <li><a href="{{ item.url }}"{% if item.url == page.url %} aria-current="page"{% endif %}>{{ item.label }}</a></li>
+    {%- endfor -%}
+  </ul></nav>
+</header>
+
+<div class="dw" id="dw" aria-hidden="true">
+  <div class="dw-t"><span class="u11 mute">Menu</span>
+    <button class="u11" type="button" data-menu-close>Close ✕</button></div>
+  <nav>{% for item in nav %}<a href="{{ item.url }}" data-menu-close>{{ item.label }}</a>{% endfor %}</nav>
+  <div class="dw-f">
+    <a class="btn" href="{{ site.booking_url }}" target="_blank" rel="noopener">Book an appointment</a>
+    <a class="u11 mute" href="sms:{{ site.text_link }}">Text {{ site.text_display }}</a>
+  </div>
+</div>
+
+<main id="main">
+{{ content | safe }}
+</main>
+
+<footer>
+  <div class="fcta">
+    <div class="wrap">
+      <span class="u10 mute">{{ site.neighborhood }}</span>
+      <h2 class="big" style="margin:16px auto 0;max-width:16ch">Ready when<br>you are</h2>
+      <div class="btns">
+        <a class="btn" href="{{ site.booking_url }}" target="_blank" rel="noopener">Book an appointment</a>
+        <a class="btn btn-o" href="tel:{{ site.phone_link }}">Call {{ site.phone_display }}</a>
+      </div>
+    </div>
+  </div>
+  <div class="wrap">
+    <a class="flogo" href="/" aria-label="{{ site.name }} — home">
+      <img src="/images/logo.png" alt="{{ site.name }}" width="894" height="900">
+    </a>
+    <div class="fg">
+      <div><h4>{{ site.name }}</h4>
+        <address>{{ site.address_line1 }}<br>{{ site.address_line2 }}<br>
+        <a href="tel:{{ site.phone_link }}">{{ site.phone_display }}</a> · <a href="sms:{{ site.text_link }}">Text {{ site.text_display }}</a><br>
+        <a href="mailto:{{ site.email }}">{{ site.email }}</a></address></div>
+      <div><h4>Explore</h4><ul>
+        {%- for item in nav -%}{% if loop.index0 < 6 %}<li><a href="{{ item.url }}">{{ item.label }}</a></li>{% endif %}{%- endfor -%}
+      </ul></div>
+      <div><h4>More</h4><ul>
+        {%- for item in nav -%}{% if loop.index0 >= 6 %}<li><a href="{{ item.url }}">{{ item.label }}</a></li>{% endif %}{%- endfor -%}
+      </ul></div>
+      <div><h4>Hours</h4><ul>
+        <li>{{ site.hours_weekday }}</li><li>{{ site.hours_sunday }}</li></ul>
+        <h4 style="margin-top:22px">Follow</h4><ul>
+        <li><a href="{{ site.instagram_url }}" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="{{ site.google_url }}" target="_blank" rel="noopener">Google</a></li>
+        <li><a href="{{ site.yelp_url }}" target="_blank" rel="noopener">Yelp</a></li>
+        </ul></div>
+    </div>
+    <div class="fl">
+      <span class="u10 mute">© 2026 {{ site.name }}</span>
+      <span class="u10 mute"><a href="/policies/">Policies</a> · <a href="/faq/">FAQ</a> · <a href="/contact/">Contact</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/site.js" defer></script>
+{% if chatbot.enabled %}<script src="/assets/chat.js" defer></script>{% endif %}
+</body>
+</html>

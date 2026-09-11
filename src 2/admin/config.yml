@@ -1,0 +1,313 @@
+# Every field Ivy sees in the admin panel is defined here.
+# Labels are written the way a salon owner would say them, not the way a
+# developer would. Hints explain what each thing actually does on the site.
+
+backend:
+  name: github
+  repo: polishedmanager25/polished-nail-bar
+  branch: main
+
+media_folder: "src/images"
+public_folder: "/images"
+
+site_url: https://polishednailbardtla.com
+display_url: https://polishednailbardtla.com
+logo_url: https://polishednailbardtla.com/images/og.jpg
+
+collections:
+  # ---------------------------------------------------------------- PROMOS
+  - name: promos
+    label: "Promotions — The Latest page"
+    files:
+      - name: promos
+        label: "Promo cards"
+        file: "src/_data/promos.json"
+        description: "The cards on The Latest page. Untick Show on site to hide one without deleting it."
+        fields:
+          - name: items
+            label: "Promo cards"
+            label_singular: "promo"
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { name: live, label: "Show on site", widget: boolean, default: true }
+              - { name: title, label: "Headline", widget: string, hint: "Kept short — three or four words reads best." }
+              - { name: kicker, label: "Small label above the headline", widget: string, hint: "For example: Rewards · New clients" }
+              - { name: body, label: "Description", widget: text }
+              - name: tags
+                label: "Filter buttons this shows under"
+                widget: select
+                multiple: true
+                options: [seasonal, rewards, promos, events, new]
+              - { name: image, label: "Photo filename", widget: string, hint: "A filename from the images folder, e.g. g4.jpg" }
+
+  # -------------------------------------------------------------- SERVICES
+  - name: services
+    label: "Services & Pricing"
+    files:
+      - name: services
+        label: "Price menu"
+        file: "src/_data/services.json"
+        description: "The full price menu. This also feeds the chat assistant, so a price changed here is correct everywhere."
+        fields:
+          - name: categories
+            label: "Menu sections"
+            label_singular: "section"
+            widget: list
+            summary: "{{fields.heading}}"
+            fields:
+              - { name: heading, label: "Section name", widget: string, hint: "Manicure, Pedicure, Nail Sets…" }
+              - { name: label, label: "Small label above it", widget: string, required: false }
+              - { name: intro, label: "Intro line", widget: text, required: false }
+              - name: items
+                label: "Services in this section"
+                label_singular: "service"
+                widget: list
+                summary: "{{fields.name}} — {{fields.price}}"
+                fields:
+                  - { name: name, label: "Service name", widget: string }
+                  - { name: price, label: "Price", widget: string, hint: "Type it how it should read: $65, From $70, or $25 | $45" }
+                  - { name: tag, label: "Badge", widget: string, required: false, hint: "Best seller, Popular — leave blank for none" }
+                  - { name: note, label: "Description", widget: text, required: false }
+
+  # --------------------------------------------------------------- JOURNAL
+  - name: posts
+    label: "Journal — blog posts"
+    folder: "src/posts"
+    create: true
+    slug: "{{fields.order}}-{{slug}}"
+    extension: md
+    format: frontmatter
+    summary: "{{title}}"
+    fields:
+      - { name: title, label: "Title", widget: string }
+      - { name: kicker, label: "Category", widget: string, hint: "For example: Nail care, DTLA guide" }
+      - { name: blurb, label: "Teaser", widget: text, hint: "The line shown on the card, before someone clicks in." }
+      - { name: image, label: "Photo filename", widget: string, hint: "e.g. g3.jpg" }
+      - { name: order, label: "Order number", widget: number, default: 7, hint: "Higher numbers appear first." }
+      - { name: body, label: "The post", widget: markdown }
+
+  # -------------------------------------------------------------- SETTINGS
+  - name: settings
+    label: "Salon details"
+    files:
+      - name: site
+        label: "Contact, hours & ratings"
+        file: "src/_data/site.json"
+        description: "Changed in one place, updated on all 12 pages and in the chat assistant."
+        fields:
+          - { name: name, label: "Business name", widget: string }
+          - { name: established, label: "Year opened", widget: string }
+          - { name: phone_display, label: "Phone (as shown)", widget: string }
+          - { name: phone_link, label: "Phone (dial format)", widget: string, hint: "+12132660077" }
+          - { name: text_display, label: "Text number (as shown)", widget: string }
+          - { name: text_link, label: "Text number (dial format)", widget: string }
+          - { name: email, label: "Email", widget: string }
+          - { name: ga_id, label: "Google Analytics ID", widget: string, required: false, hint: "Starts with G-. Leave blank to turn tracking off." }
+          - { name: address_line1, label: "Street address", widget: string }
+          - { name: address_line2, label: "City, state, ZIP", widget: string }
+          - { name: neighborhood, label: "Neighborhood", widget: string }
+          - { name: hours_weekday, label: "Weekday hours", widget: string }
+          - { name: hours_sunday, label: "Sunday hours", widget: string }
+          - { name: google_rating, label: "Google rating", widget: string }
+          - { name: google_count, label: "Google review count", widget: string }
+          - { name: yelp_rating, label: "Yelp rating", widget: string }
+          - { name: yelp_count, label: "Yelp review count", widget: string }
+          - { name: parking, label: "Parking hours", widget: string }
+          - { name: parking_note, label: "Parking condition", widget: string }
+          - { name: rewards_label, label: "Rewards — small label", widget: string }
+          - { name: rewards_name, label: "Rewards — name", widget: string }
+          - { name: rewards_note, label: "Rewards — note", widget: string }
+          - name: promo_bar
+            label: "Gold scrolling bar at the top"
+            widget: list
+            field: { name: line, label: "Line", widget: string }
+            hint: "Each line scrolls past in the gold bar on every page."
+          - { name: service_band_words, label: "Service banner — words", widget: string }
+          - { name: service_band_accent, label: "Service banner — italic word", widget: string }
+          - { name: service_band_tail, label: "Service banner — last word", widget: string }
+          - { name: booking_url, label: "Booking link", widget: string }
+          - { name: booking_services_url, label: "Booking link (services tab)", widget: string }
+          - { name: instagram_url, label: "Instagram", widget: string }
+          - { name: google_url, label: "Google listing", widget: string }
+          - { name: yelp_url, label: "Yelp listing", widget: string }
+          - { name: directions_url, label: "Directions link", widget: string }
+
+      - name: home
+        label: "Homepage text"
+        file: "src/_data/home.json"
+        fields:
+          - { name: hero_line1, label: "Headline, first line", widget: string }
+          - { name: hero_italic, label: "The italic word", widget: string }
+          - { name: hero_line2, label: "Headline, after the italic word", widget: string }
+          - { name: hero_lead, label: "Paragraph under the headline", widget: text }
+          - { name: hero_poster, label: "Still image behind the hero video", widget: string, hint: "Shown until the video loads, and if there is no video. A filename from the images folder." }
+          - { name: craft_heading, label: "Nail art section — heading", widget: string }
+          - { name: craft_body, label: "Nail art section — paragraph", widget: text }
+          - { name: bestsellers_intro, label: "Best sellers — intro", widget: text }
+          - name: tiles
+            label: "The four service tiles"
+            widget: list
+            summary: "{{fields.title}} — {{fields.price}}"
+            fields:
+              - { name: title, label: "Name", widget: string }
+              - { name: price, label: "Price", widget: string }
+              - { name: kicker, label: "Small label", widget: string }
+              - { name: body, label: "Description", widget: text }
+              - { name: image, label: "Photo filename", widget: string }
+              - { name: url, label: "Links to", widget: string }
+          - name: featured_prices
+            label: "Prices shown on the homepage"
+            widget: list
+            summary: "{{fields.name}} — {{fields.price}}"
+            fields:
+              - { name: name, label: "Service", widget: string }
+              - { name: price, label: "Price", widget: string }
+          - name: perks
+            label: "Good to know — the four boxes"
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { name: title, label: "Heading", widget: string }
+              - { name: body, label: "Text", widget: text }
+          - name: strip
+            label: "Three-across photo strip"
+            widget: list
+            fields:
+              - { name: label, label: "Caption", widget: string }
+              - { name: image, label: "Photo filename", widget: string }
+
+      - name: about
+        label: "About page photos"
+        file: "src/_data/about.json"
+        fields:
+          - { name: film_poster, label: "Still image behind the About video", widget: string, hint: "Shown until the video loads, and on phones that block autoplay. A filename from the images folder, e.g. about-01.jpg" }
+          - { name: film_caption, label: "About video — caption", widget: string }
+          - { name: craft_image, label: "\"What we do\" photo", widget: string, hint: "The tall photo beside the Our Craft text." }
+          - { name: craft_caption, label: "\"What we do\" caption", widget: string }
+          - name: squares
+            label: "Three-across photo strip"
+            widget: list
+            summary: "{{fields.image}}"
+            fields:
+              - { name: label, label: "Caption", widget: string }
+              - { name: image, label: "Photo filename", widget: string }
+          - { name: visit_image, label: "\"215 W 6th Street\" photo", widget: string }
+          - { name: visit_caption, label: "\"215 W 6th Street\" caption", widget: string }
+
+      - name: gallery
+        label: "Gallery photos"
+        file: "src/_data/gallery.json"
+        fields:
+          - name: home
+            label: "Six shown on the homepage"
+            widget: list
+            summary: "{{fields.image}}"
+            fields:
+              - { name: label, label: "Caption", widget: string }
+              - { name: image, label: "Photo filename", widget: string }
+          - name: full
+            label: "All photos on the Gallery page"
+            widget: list
+            summary: "{{fields.image}}"
+            fields:
+              - { name: label, label: "Caption", widget: string }
+              - { name: image, label: "Photo filename", widget: string }
+
+  # ------------------------------------------------------------------- FAQ
+  - name: faq
+    label: "FAQ"
+    files:
+      - name: faq
+        label: "Questions & answers"
+        file: "src/_data/faq.json"
+        description: "Also feeds the chat assistant."
+        fields:
+          - name: groups
+            label: "Sections"
+            widget: list
+            summary: "{{fields.heading}}"
+            fields:
+              - { name: heading, label: "Section name", widget: string }
+              - name: items
+                label: "Questions"
+                widget: list
+                summary: "{{fields.question}}"
+                fields:
+                  - { name: question, label: "Question", widget: string }
+                  - { name: answer, label: "Answer", widget: text }
+
+  # -------------------------------------------------------------- POLICIES
+  - name: policies
+    label: "Policies"
+    files:
+      - name: policies
+        label: "Salon policies"
+        file: "src/_data/policies.json"
+        description: "Also feeds the chat assistant."
+        fields:
+          - name: groups
+            label: "Sections"
+            widget: list
+            summary: "{{fields.heading}}"
+            fields:
+              - { name: heading, label: "Section name", widget: string }
+              - name: items
+                label: "Clauses"
+                widget: list
+                summary: "{{fields.heading}}"
+                fields:
+                  - { name: heading, label: "Clause", widget: string }
+                  - { name: body, label: "Wording", widget: text }
+
+  # --------------------------------------------------------------- REVIEWS
+  - name: reviews
+    label: "Reviews"
+    files:
+      - name: reviews
+        label: "Client reviews"
+        file: "src/_data/reviews.json"
+        fields:
+          - name: items
+            label: "Reviews"
+            widget: list
+            summary: "{{fields.name}} — {{fields.source}}"
+            fields:
+              - { name: quote, label: "What they said", widget: text }
+              - { name: name, label: "Name", widget: string }
+              - { name: source, label: "Where from", widget: string, hint: "Google, Yelp, Yelp Elite" }
+              - { name: featured, label: "Feature this one", widget: boolean, default: false }
+
+  # -------------------------------------------------------- CHAT ASSISTANT
+  - name: chatbot
+    label: "Chat assistant"
+    files:
+      - name: technicians
+        label: "Technicians"
+        file: "src/_data/technicians.json"
+        description: "The assistant suggests who suits a service. It never promises a specific person or time."
+        fields:
+          - { name: note, label: "Internal note", widget: text }
+          - name: list
+            label: "Technicians"
+            widget: list
+            summary: "{{fields.name}}"
+            fields:
+              - { name: name, label: "Name", widget: string }
+              - name: specialties
+                label: "What they're known for"
+                widget: list
+                field: { name: item, label: "Specialty", widget: string }
+              - { name: taking_new, label: "Taking new clients", widget: boolean, default: true }
+
+      - name: chatbot
+        label: "What the assistant knows"
+        file: "src/_data/chatbot.json"
+        description: "Everything here is read fresh on every question. Save it and the assistant knows it within about a minute. There is nothing to retrain."
+        fields:
+          - { name: enabled, label: "Show the chat bubble on the site", widget: boolean, default: true }
+          - { name: greeting, label: "Opening line", widget: string }
+          - { name: tone, label: "Tone", widget: text, hint: "How it should sound. Plain sentences." }
+          - { name: house_rules, label: "House rules", widget: text, hint: "What it must and must not do. One rule per line." }
+          - { name: extra_knowledge, label: "Extra knowledge", widget: text, hint: "Anything not on the website — timings, what you don't offer, quirks. One fact per line." }
+          - { name: handoff_text, label: "Handoff line", widget: string, hint: "What it says when it can't answer." }
