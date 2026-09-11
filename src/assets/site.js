@@ -2,6 +2,26 @@
 (function () {
   'use strict';
 
+  /* ---- conversion events for Google Analytics ----
+     Booking happens on GlossGenius, off this site, so the only thing
+     Analytics can see is the tap that leaves. These four events are what
+     get marked as Key Events in GA4 and what Google Ads optimises for. */
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a[href]');
+    if (!a || typeof window.gtag !== 'function') return;
+    var h = a.getAttribute('href') || '', name = null;
+    if (h.indexOf('glossgenius.com') !== -1) name = 'book_click';
+    else if (h.indexOf('tel:') === 0)         name = 'call_click';
+    else if (h.indexOf('sms:') === 0)         name = 'text_click';
+    else if (h.indexOf('instagram.com') !== -1) name = 'instagram_click';
+    if (!name) return;
+    gtag('event', name, {
+      link_url:  h,
+      link_text: (a.textContent || '').trim().slice(0, 60),
+      page_path: location.pathname
+    });
+  }, true);
+
   /* ---- menu drawer ---- */
   var drawer = document.getElementById('dw');
   function setDrawer(open) {
