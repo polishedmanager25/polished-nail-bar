@@ -1,14 +1,17 @@
+import { getStore } from "@netlify/blobs";
+
 /**
  * Polished Nail Bar DTLA — Baby P chat function (Netlify)
  *
  * Runs on Netlify's US servers, so Baby P works for visitors anywhere
  * in the world. The website calls it at /api/chat.
  *
- * SET IN NETLIFY: Site configuration > Environment variables
+ * SET IN NETLIFY: Environment variables
  *   ANTHROPIC_API_KEY   your key from platform.claude.com
+ *   CHAT_LOG_PASSWORD   password for the private chat log page
  *
- * QUESTION LOG: every question and answer is written to the function log.
- * Read it in Netlify > Logs & metrics > Functions > chat
+ * CHAT LOG: every question and answer is saved permanently.
+ * View it at https://polishednailbardtla.com/chat-log?key=YOUR_PASSWORD
  */
 
 const MODEL = "claude-haiku-4-5-20251001";
@@ -86,13 +89,16 @@ export default async (req) => {
       .join("\n")
       .trim();
 
-    // question log — Netlify > Logs & metrics > Functions > chat
+    // short-term log — Netlify > Functions > chat (kept 24 hours)
     console.log(JSON.stringify({
       type: "baby_p_chat",
       page: req.headers.get("referer") || "",
       question,
       reply: reply.slice(0, 1000),
     }));
+
+    // permanent log — shown on the /chat-log page
+    await saveChat(question, reply, req);
 
     return json({ reply: reply || "Sorry, I did not catch that." }, 200);
   } catch (err) {
@@ -103,10 +109,21 @@ export default async (req) => {
 
 export const config = { path: "/api/chat" };
 
+async function saveChat(question, reply, req) {
+  try {
+    const time = new Date().toLocaleString("en-US", { timeZone: "America/Los_Angeles" });
+    const id = new Date().toISOString() + "-" + Math.random().toString(36).slice(2, 7);
+    await getStore("baby-p-chats").setJSON(id, {
+      time, question, reply, page: req.headers.get("referer") || "",
+    });
+  } catch (err) {
+    console.log("save chat failed", String(err));
+  }
+}
+
 function json(obj, status) {
   return new Response(JSON.stringify(obj), {
     status,
     headers: { "Content-Type": "application/json" },
   });
 }
-      
