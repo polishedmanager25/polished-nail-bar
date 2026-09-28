@@ -87,7 +87,7 @@ export default async (req) => {
       .trim();
 
     // question log — Netlify > Logs & metrics > Functions > chat
-    console.log(JSON.stringify({.
+    console.log(JSON.stringify({
       type: "baby_p_chat",
       page: req.headers.get("referer") || "",
       question,
