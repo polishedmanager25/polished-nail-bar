@@ -87,5 +87,26 @@ export default async (req) => {
       .trim();
 
     // question log — Netlify > Logs & metrics > Functions > chat
-    console.log(JSON.stringify({
-      type:
+    console.log(JSON.stringify({.
+      type: "baby_p_chat",
+      page: req.headers.get("referer") || "",
+      question,
+      reply: reply.slice(0, 1000),
+    }));
+
+    return json({ reply: reply || "Sorry, I did not catch that." }, 200);
+  } catch (err) {
+    console.log("function error", String(err));
+    return json({ error: "Assistant unavailable" }, 502);
+  }
+};
+
+export const config = { path: "/api/chat" };
+
+function json(obj, status) {
+  return new Response(JSON.stringify(obj), {
+    status,
+    headers: { "Content-Type": "application/json" },
+  });
+}
+      
