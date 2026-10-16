@@ -17,7 +17,7 @@ logo_url: https://polishednailbardtla.com/images/og.jpg
 collections:
   # ---------------------------------------------------------------- PROMOS
   - name: promos
-    label: "Promotions — The Latest page"
+    label: "Promotions \u2014 The Latest page"
     files:
       - name: promos
         label: "Promo cards"
@@ -31,8 +31,8 @@ collections:
             summary: "{{fields.title}}"
             fields:
               - { name: live, label: "Show on site", widget: boolean, default: true }
-              - { name: title, label: "Headline", widget: string, hint: "Kept short — three or four words reads best." }
-              - { name: kicker, label: "Small label above the headline", widget: string, hint: "For example: Rewards · New clients" }
+              - { name: title, label: "Headline", widget: string, hint: "Kept short \u2014 three or four words reads best." }
+              - { name: kicker, label: "Small label above the headline", widget: string, hint: "For example: Rewards \u00b7 New clients" }
               - { name: body, label: "Description", widget: text }
               - name: tags
                 label: "Filter buttons this shows under"
@@ -56,23 +56,23 @@ collections:
             widget: list
             summary: "{{fields.heading}}"
             fields:
-              - { name: heading, label: "Section name", widget: string, hint: "Manicure, Pedicure, Nail Sets…" }
+              - { name: heading, label: "Section name", widget: string, hint: "Manicure, Pedicure, Nail Sets\u2026" }
               - { name: label, label: "Small label above it", widget: string, required: false }
               - { name: intro, label: "Intro line", widget: text, required: false }
               - name: items
                 label: "Services in this section"
                 label_singular: "service"
                 widget: list
-                summary: "{{fields.name}} — {{fields.price}}"
+                summary: "{{fields.name}} \u2014 {{fields.price}}"
                 fields:
                   - { name: name, label: "Service name", widget: string }
                   - { name: price, label: "Price", widget: string, hint: "Type it how it should read: $65, From $70, or $25 | $45" }
-                  - { name: tag, label: "Badge", widget: string, required: false, hint: "Best seller, Popular — leave blank for none" }
+                  - { name: tag, label: "Badge", widget: string, required: false, hint: "Best seller, Popular \u2014 leave blank for none" }
                   - { name: note, label: "Description", widget: text, required: false }
 
   # --------------------------------------------------------------- JOURNAL
   - name: posts
-    label: "Journal — blog posts"
+    label: "Journal \u2014 blog posts"
     folder: "src/posts"
     create: true
     slug: "{{fields.order}}-{{slug}}"
@@ -115,17 +115,17 @@ collections:
           - { name: yelp_count, label: "Yelp review count", widget: string }
           - { name: parking, label: "Parking hours", widget: string }
           - { name: parking_note, label: "Parking condition", widget: string }
-          - { name: rewards_label, label: "Rewards — small label", widget: string }
-          - { name: rewards_name, label: "Rewards — name", widget: string }
-          - { name: rewards_note, label: "Rewards — note", widget: string }
+          - { name: rewards_label, label: "Rewards \u2014 small label", widget: string }
+          - { name: rewards_name, label: "Rewards \u2014 name", widget: string }
+          - { name: rewards_note, label: "Rewards \u2014 note", widget: string }
           - name: promo_bar
             label: "Gold scrolling bar at the top"
             widget: list
             field: { name: line, label: "Line", widget: string }
             hint: "Each line scrolls past in the gold bar on every page."
-          - { name: service_band_words, label: "Service banner — words", widget: string }
-          - { name: service_band_accent, label: "Service banner — italic word", widget: string }
-          - { name: service_band_tail, label: "Service banner — last word", widget: string }
+          - { name: service_band_words, label: "Service banner \u2014 words", widget: string }
+          - { name: service_band_accent, label: "Service banner \u2014 italic word", widget: string }
+          - { name: service_band_tail, label: "Service banner \u2014 last word", widget: string }
           - { name: booking_url, label: "Booking link", widget: string }
           - { name: booking_services_url, label: "Booking link (services tab)", widget: string }
           - { name: instagram_url, label: "Instagram", widget: string }
@@ -142,13 +142,13 @@ collections:
           - { name: hero_line2, label: "Headline, after the italic word", widget: string }
           - { name: hero_lead, label: "Paragraph under the headline", widget: text }
           - { name: hero_poster, label: "Still image behind the hero video", widget: string, hint: "Shown until the video loads, and if there is no video. A filename from the images folder." }
-          - { name: craft_heading, label: "Nail art section — heading", widget: string }
-          - { name: craft_body, label: "Nail art section — paragraph", widget: text }
-          - { name: bestsellers_intro, label: "Best sellers — intro", widget: text }
+          - { name: craft_heading, label: "Nail art section \u2014 heading", widget: string }
+          - { name: craft_body, label: "Nail art section \u2014 paragraph", widget: text }
+          - { name: bestsellers_intro, label: "Best sellers \u2014 intro", widget: text }
           - name: tiles
             label: "The four service tiles"
             widget: list
-            summary: "{{fields.title}} — {{fields.price}}"
+            summary: "{{fields.title}} \u2014 {{fields.price}}"
             fields:
               - { name: title, label: "Name", widget: string }
               - { name: price, label: "Price", widget: string }
@@ -159,12 +159,12 @@ collections:
           - name: featured_prices
             label: "Prices shown on the homepage"
             widget: list
-            summary: "{{fields.name}} — {{fields.price}}"
+            summary: "{{fields.name}} \u2014 {{fields.price}}"
             fields:
               - { name: name, label: "Service", widget: string }
               - { name: price, label: "Price", widget: string }
           - name: perks
-            label: "Good to know — the four boxes"
+            label: "Good to know \u2014 the four boxes"
             widget: list
             summary: "{{fields.title}}"
             fields:
@@ -182,7 +182,7 @@ collections:
         file: "src/_data/about.json"
         fields:
           - { name: film_poster, label: "Still image behind the About video", widget: string, hint: "Shown until the video loads, and on phones that block autoplay. A filename from the images folder, e.g. about-01.jpg" }
-          - { name: film_caption, label: "About video — caption", widget: string }
+          - { name: film_caption, label: "About video \u2014 caption", widget: string }
           - { name: craft_image, label: "\"What we do\" photo", widget: string, hint: "The tall photo beside the Our Craft text." }
           - { name: craft_caption, label: "\"What we do\" caption", widget: string }
           - name: squares
@@ -271,7 +271,7 @@ collections:
           - name: items
             label: "Reviews"
             widget: list
-            summary: "{{fields.name}} — {{fields.source}}"
+            summary: "{{fields.name}} \u2014 {{fields.source}}"
             fields:
               - { name: quote, label: "What they said", widget: text }
               - { name: name, label: "Name", widget: string }
@@ -309,5 +309,58 @@ collections:
           - { name: greeting, label: "Opening line", widget: string }
           - { name: tone, label: "Tone", widget: text, hint: "How it should sound. Plain sentences." }
           - { name: house_rules, label: "House rules", widget: text, hint: "What it must and must not do. One rule per line." }
-          - { name: extra_knowledge, label: "Extra knowledge", widget: text, hint: "Anything not on the website — timings, what you don't offer, quirks. One fact per line." }
+          - { name: extra_knowledge, label: "Extra knowledge", widget: text, hint: "Anything not on the website \u2014 timings, what you don't offer, quirks. One fact per line." }
           - { name: handoff_text, label: "Handoff line", widget: string, hint: "What it says when it can't answer." }
+
+  # --------------------------------------------------------- GROUP BOOKING
+  - name: group_booking
+    label: "Group Booking page"
+    files:
+      - name: group
+        label: "Group Booking"
+        file: "src/_data/group.json"
+        description: "Everything on the Group Booking page: intro, buttons, steps, perks and group policy."
+        fields:
+          - { name: seo_description, label: "Google search description", widget: text, hint: "The short blurb Google shows under the page title. Keep it under 155 characters." }
+          - { name: hero_intro, label: "Top intro", widget: text }
+          - { name: hero_note, label: "Bold line under the intro", widget: string, required: false, hint: "Seasonal note. Leave blank to hide it." }
+          - name: buttons
+            label: "Top buttons"
+            label_singular: "button"
+            widget: list
+            summary: "{{fields.label}}"
+            fields:
+              - { name: label, label: "Button text", widget: string }
+              - { name: link, label: "Link", widget: string, hint: "A web link, tel:+12132660077 for calls, or sms:+13233793469 for texts" }
+              - { name: style, label: "Style", widget: select, options: ["solid", "outline"], default: "outline", hint: "Solid is the black button. Outline is the white one." }
+          - name: steps
+            label: "How it works steps"
+            widget: list
+            field: { name: step, label: "Step", widget: string }
+          - { name: steps_note_bold, label: "Note under the steps (bold part)", widget: string, required: false }
+          - { name: steps_note, label: "Note under the steps (rest)", widget: string, required: false }
+          - { name: perks_title, label: "Perks box heading", widget: string }
+          - { name: perks_intro, label: "Perks intro", widget: text }
+          - name: tiers
+            label: "Perk tiers"
+            label_singular: "tier"
+            widget: list
+            summary: "{{fields.name}}"
+            fields:
+              - { name: name, label: "Tier name", widget: string, hint: "For example: Groups of 6-7" }
+              - { name: lead, label: "Line under the tier name", widget: string, required: false, hint: "For example: Everything above, plus:" }
+              - name: items
+                label: "Perks"
+                widget: list
+                field: { name: item, label: "Perk", widget: string }
+          - { name: perks_fine_print, label: "Perks fine print", widget: text, required: false }
+          - { name: golden_hour_title, label: "Golden Hour heading", widget: string }
+          - { name: golden_hour, label: "Golden Hour text", widget: text }
+          - name: policies
+            label: "Group policy items"
+            label_singular: "policy item"
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { name: title, label: "Heading", widget: string }
+              - { name: body, label: "Wording", widget: text }
