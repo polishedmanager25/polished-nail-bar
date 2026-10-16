@@ -23,3 +23,35 @@
       "lead": "",
       "items": [
         "A welcome toast for every guest (21+)",
+        "A collagen hand mask for everyone",
+        "5-hour validated parking for every guest who spends $100+ in cash"
+      ]
+    },
+    {
+      "name": "Groups of 6\u20137",
+      "lead": "Everything above, plus:",
+      "items": [
+        "A free matte, jelly, or special top coat upgrade for every guest",
+        "Free nail art (up to $15 value) for the guest of honor"
+      ]
+    },
+    {
+      "name": "Groups of 8+",
+      "lead": "Everything above, plus:",
+      "items": [
+        "An extra 5 minutes of massage for every guest",
+        "Golden Hour fee waived for private early or late bookings"
+      ]
+    }
+  ],
+  "perks_fine_print": "To qualify, each guest must book a hand service (manicure or nail set) and a foot service (pedicure). Group size counts qualifying guests only. The welcome toast is for guests 21+ and served during business hours only. Parking validation applies to guests who spend $100+ in cash. Perks have no cash value.",
+  "golden_hour_title": "The Golden Hour",
+  "golden_hour": "Want the salon to yourselves, or need us beyond our usual hours? We'll open early or stay late by request. A Golden Hour fee applies for extended or private timing.",
+  "policies": [
+    { "title": "Confirmation", "body": "After you book, our team reaches out within 24 hours to confirm. Requests aren't guaranteed until confirmed." },
+    { "title": "Payment & gratuity", "body": "A credit card holds all group appointments, with a deposit to secure your reservation. The balance is charged on the day of your booking. Advance payment may be required for services totaling $80+ per guest. A 20% gratuity is added to all group bookings, calculated on the full service total, and goes directly to your nail artists." },
+    { "title": "Cancellation & changes", "body": "We ask for at least 48 hours' notice for any change, including guest count. With notice, your deposit carries to your new date. Within 48 hours, your deposit is retained. No-shows may be charged up to 50%." },
+    { "title": "Running late", "body": "Let us know as soon as you can and we'll do our best to accommodate. Shortened services due to late arrival are charged at the scheduled rate." },
+    { "title": "Food & drink", "body": "Light food and drink are permitted with advance notice for standard bookings. Anything is welcome for private events." }
+  ]
+}
