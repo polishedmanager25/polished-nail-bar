@@ -1,97 +1,83 @@
 ---
 layout: base.njk
-title: "Group Booking ‚Äî Bridal, Birthdays & Parties | Polished Nail Bar DTLA"
-description: "Book your bridal party, birthday or corporate group. Group perks, private Golden Hours and custom packages."
+title: "Group Booking: Bridal, Birthdays & Parties | Polished Nail Bar DTLA"
 permalink: /group-booking/
+eleventyComputed:
+  description: "{{ group.seo_description }}"
 ---
 <section class="masthead">
   <div class="wrap">
-    <span class="u10 mute">Group Booking ¬∑ Polished Nail Bar DTLA</span>
+    <span class="u10 mute">Group Booking &middot; Polished Nail Bar DTLA</span>
     <h1 class="mega">Bridal,<br>birthdays<br>&amp; girls' days</h1>
-    <p class="lead">Celebrating something special? Book your group and let us pamper everyone in true Polished style, with group perks, private Golden Hours, and custom packages.</p>
-    <p class="lead" style="margin-top:14px"><strong>Now booking holiday parties, office team outings &amp; bachelorettes for November‚ÄìDecember.</strong></p>
+    <p class="lead">{{ group.hero_intro }}</p>
+    {% if group.hero_note %}<p class="lead" style="margin-top:14px"><strong>{{ group.hero_note }}</strong></p>{% endif %}
     <div class="btns">
-      <a class="btn" href="https://polisheddtla.glossgenius.com/services" target="_blank" rel="noopener">Book your group</a>
-      <a class="btn btn-o" href="tel:+12132660077">Call 213-266-0077</a>
-      <a class="btn btn-o" href="sms:+13233793469">Text 323-379-3469</a>
+      {% for b in group.buttons %}
+      <a class="btn{% if b.style == 'outline' %} btn-o{% endif %}" href="{{ b.link }}"{% if b.link.startsWith('http') %} target="_blank" rel="noopener"{% endif %}>{{ b.label }}</a>
+      {% endfor %}
     </div>
   </div>
 </section>
 
 <div class="g gtrio">
-  <div class="ph r11 zoom" data-l="Group photo 1 ¬∑ group-01.jpg">
+  <div class="ph r11 zoom" data-l="Group photo 1 &middot; group-01.jpg">
     <img src="/images/group-01.jpg" alt="A group at Polished Nail Bar" onerror="this.remove()"></div>
-  <div class="ph r11 zoom" data-l="Group photo 2 ¬∑ group-02.jpg">
+  <div class="ph r11 zoom" data-l="Group photo 2 &middot; group-02.jpg">
     <img src="/images/group-02.jpg" alt="A group at Polished Nail Bar" onerror="this.remove()"></div>
-  <div class="ph r11 zoom" data-l="Group photo 3 ¬∑ group-03.jpg">
+  <div class="ph r11 zoom" data-l="Group photo 3 &middot; group-03.jpg">
     <img src="/images/group-03.jpg" alt="A group at Polished Nail Bar" onerror="this.remove()"></div>
 </div>
 
 <section class="sec wrap">
   <div class="sh rv">
-    <div class="top"><span class="u10 mute">01 ‚Äî How It Works</span><span class="u10 mute">Four steps</span></div>
+    <div class="top"><span class="u10 mute">01 &mdash; How It Works</span><span class="u10 mute">Four steps</span></div>
     <h2 class="big">Booking your group</h2>
     <p class="say">Everything starts on our booking page. Once you've booked, a member of our team reaches out within 24 hours to confirm the details.</p>
   </div>
   <div class="steps rv">
-    <div class="step"><p>On our booking page, select the <strong>Services</strong> tab.</p></div>
-    <div class="step"><p>Under category, select <strong>Group Booking</strong>.</p></div>
-    <div class="step"><p>Select the option that fits your guest size.</p></div>
-    <div class="step"><p>Book your appointment to reserve your spot.</p></div>
+    {% for s in group.steps %}
+    <div class="step"><p>{{ s }}</p></div>
+    {% endfor %}
   </div>
-  <p class="say rv" style="margin-top:22px"><strong>Groups of 4 or more.</strong> Book at least 1 week ahead (2‚Äì3 weeks for weekends and December).</p>
+  {% if group.steps_note or group.steps_note_bold %}
+  <p class="say rv" style="margin-top:22px"><strong>{{ group.steps_note_bold }}</strong> {{ group.steps_note }}</p>
+  {% endif %}
   <div class="btns"><a class="btn" href="https://polisheddtla.glossgenius.com/services" target="_blank" rel="noopener">Go to booking</a></div>
 </section>
 
 <section class="sec dark on-dark">
   <div class="wrap">
     <div class="sh rv">
-      <div class="top"><span class="u10 mute">02 ‚Äî Perks &amp; Extras</span></div>
+      <div class="top"><span class="u10 mute">02 &mdash; Perks &amp; Extras</span></div>
       <h2 class="big">What we can arrange</h2>
     </div>
     <div class="g g2 rv" style="gap:clamp(26px,3vw,44px)">
-      <div class="perk"><h3>Group Perks</h3>
-        <p>The bigger the party, the better it gets. Every guest who books a hand service and a foot service unlocks your group's perks.</p>
-        <p style="margin-top:16px"><strong>Groups of 4‚Äì5</strong></p>
+      <div class="perk"><h3>{{ group.perks_title }}</h3>
+        <p>{{ group.perks_intro }}</p>
+        {% for t in group.tiers %}
+        <p style="margin-top:16px"><strong>{{ t.name }}</strong>{% if t.lead %}<br>{{ t.lead }}{% endif %}</p>
         <ul style="margin:6px 0 0 1.1em;padding:0;list-style:disc">
-          <li>A welcome toast for every guest (21+)</li>
-          <li>A collagen hand mask for everyone</li>
-          <li>5-hour validated parking for every guest who spends $100+ in cash</li>
+          {% for i in t.items %}<li>{{ i }}</li>{% endfor %}
         </ul>
-        <p style="margin-top:16px"><strong>Groups of 6‚Äì7</strong><br>Everything above, plus:</p>
-        <ul style="margin:6px 0 0 1.1em;padding:0;list-style:disc">
-          <li>A free matte, jelly, or special top coat upgrade for every guest</li>
-          <li>Free nail art (up to $15 value) for the guest of honor</li>
-        </ul>
-        <p style="margin-top:16px"><strong>Groups of 8+</strong><br>Everything above, plus:</p>
-        <ul style="margin:6px 0 0 1.1em;padding:0;list-style:disc">
-          <li>An extra 5 minutes of massage for every guest</li>
-          <li>Golden Hour fee waived for private early or late bookings</li>
-        </ul>
-        <p style="margin-top:16px;font-size:.85em;opacity:.8">To qualify, each guest must book a hand service (manicure or nail set) and a foot service (pedicure). Group size counts qualifying guests only. The welcome toast is for guests 21+ and served during business hours only. Parking validation applies to guests who spend $100+ in cash. Perks have no cash value.</p>
+        {% endfor %}
+        {% if group.perks_fine_print %}<p style="margin-top:16px;font-size:.85em;opacity:.8">{{ group.perks_fine_print }}</p>{% endif %}
       </div>
-      <div class="perk"><h3>The Golden Hour</h3><p>Want the salon to yourselves, or need us beyond our usual hours? We'll open early or stay late by request. A Golden Hour fee applies for extended or private timing.</p></div>
+      <div class="perk"><h3>{{ group.golden_hour_title }}</h3><p>{{ group.golden_hour }}</p></div>
     </div>
   </div>
 </section>
 
 <section class="sec wrap">
   <div class="sh rv">
-    <div class="top"><span class="u10 mute">03 ‚Äî Group Policy</span><a class="tl" href="/policies/">All policies</a></div>
+    <div class="top"><span class="u10 mute">03 &mdash; Group Policy</span><a class="tl" href="/policies/">All policies</a></div>
     <h2 class="big">The details</h2>
     <p class="say">Group bookings work a little differently from a single appointment. Here's exactly what to expect.</p>
   </div>
   <div class="acc rv">
-    <div class="acc-i open"><button class="acc-b" type="button" aria-expanded="true">Confirmation<span class="sg"></span></button>
-      <div class="acc-p"><p>After you book, our team reaches out within 24 hours to confirm. Requests aren't guaranteed until confirmed.</p></div></div>
-    <div class="acc-i"><button class="acc-b" type="button" aria-expanded="false">Payment &amp; gratuity<span class="sg"></span></button>
-      <div class="acc-p"><p>A credit card holds all group appointments, with a deposit to secure your reservation. The balance is charged on the day of your booking. Advance payment may be required for services totaling $80+ per guest. A 20% gratuity is added to all group bookings, calculated on the full service total, and goes directly to your nail artists.</p></div></div>
-    <div class="acc-i"><button class="acc-b" type="button" aria-expanded="false">Cancellation &amp; changes<span class="sg"></span></button>
-      <div class="acc-p"><p>We ask for at least 48 hours' notice for any change, including guest count. With notice, your deposit carries to your new date. Within 48 hours, your deposit is retained. No-shows may be charged up to 50%.</p></div></div>
-    <div class="acc-i"><button class="acc-b" type="button" aria-expanded="false">Running late<span class="sg"></span></button>
-      <div class="acc-p"><p>Let us know as soon as you can and we'll do our best to accommodate. Shortened services due to late arrival are charged at the scheduled rate.</p></div></div>
-    <div class="acc-i"><button class="acc-b" type="button" aria-expanded="false">Food &amp; drink<span class="sg"></span></button>
-      <div class="acc-p"><p>Light food and drink are permitted with advance notice for standard bookings. Anything is welcome for private events.</p></div></div>
+    {% for p in group.policies %}
+    <div class="acc-i{% if loop.first %} open{% endif %}"><button class="acc-b" type="button" aria-expanded="{{ 'true' if loop.first else 'false' }}">{{ p.title }}<span class="sg"></span></button>
+      <div class="acc-p"><p>{{ p.body }}</p></div></div>
+    {% endfor %}
   </div>
 </section>
 
