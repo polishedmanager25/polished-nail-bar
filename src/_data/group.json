@@ -1,0 +1,25 @@
+{
+  "seo_description": "Book your bridal party, birthday or corporate group. Group perks, private Golden Hours and custom packages.",
+  "hero_intro": "Celebrating something special? Book your group and let us pamper everyone in true Polished style, with group perks, private Golden Hours, and custom packages.",
+  "hero_note": "Now booking holiday parties, office team outings & bachelorettes for November\u2013December.",
+  "buttons": [
+    { "label": "Book your group", "link": "https://polisheddtla.glossgenius.com/services", "style": "solid" },
+    { "label": "Call 213-266-0077", "link": "tel:+12132660077", "style": "outline" },
+    { "label": "Text 323-379-3469", "link": "sms:+13233793469", "style": "outline" }
+  ],
+  "steps": [
+    "On our booking page, select the Services tab.",
+    "Under category, select Group Booking.",
+    "Select the option that fits your guest size.",
+    "Book your appointment to reserve your spot."
+  ],
+  "steps_note_bold": "Groups of 4 or more.",
+  "steps_note": "Book at least 1 week ahead (2\u20133 weeks for weekends and December).",
+  "perks_title": "Group Perks",
+  "perks_intro": "The bigger the party, the better it gets. Every guest who books a hand service and a foot service unlocks your group's perks.",
+  "tiers": [
+    {
+      "name": "Groups of 4\u20135",
+      "lead": "",
+      "items": [
+        "A welcome toast for every guest (21+)",
