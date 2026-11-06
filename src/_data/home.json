@@ -9,44 +9,52 @@
   "bestsellers_intro": "A full range of sets, done to one standard. These four move fastest — the complete menu, with every length and add-on priced, lives on the services page.",
   "tiles": [
     {
-      "kicker": "Best seller",
       "title": "Gel X",
       "price": "$65",
+      "kicker": "Best seller",
       "body": "Lightweight Après soft-gel tips. Natural feel, four to six weeks.",
       "image": "svc-gelx.jpg",
       "url": "/services/"
     },
     {
-      "kicker": "Best seller",
       "title": "24K Gold",
       "price": "$80",
+      "kicker": "Best seller",
       "body": "Our richest pedicure — gold soak, scrub, mask and a gold-cream massage.",
       "image": "svc-pedicure.jpg",
       "url": "/services/"
     },
     {
-      "kicker": "Our #1 craft",
       "title": "Nail Art",
       "price": "$20",
+      "kicker": "Our #1 craft",
       "body": "Chrome, cat-eye, ombré, French, 3D art and charms. Priced by design.",
       "image": "svc-nailart.jpg",
       "url": "/gallery/"
     },
     {
-      "kicker": "Best seller",
       "title": "Hard Gel",
       "price": "$70",
+      "kicker": "Best seller",
       "body": "Russian & BIAB. The sculpted, grown-out-clean look with real strength.",
       "image": "svc-hardgel.jpg",
       "url": "/services/"
     },
     {
-      "kicker": "Best seller",
       "title": "CBD Pedi",
       "price": "$80",
+      "kicker": "Best seller",
       "body": "Kush Queen CBD relief with a paraffin dip and an extended massage.",
       "image": "svc-cbd.jpg",
       "url": "/services/"
+    },
+    {
+      "title": "SET 80",
+      "price": "$80",
+      "kicker": "Holiday Special",
+      "body": "Short GelX Set with nail art on 1-2 nails. Browse the lookbook.",
+      "image": "set80/set80-cover.jpg",
+      "url": "/set80/"
     }
   ],
   "featured_prices": [
@@ -71,20 +79,6 @@
       "price": "From $20"
     }
   ],
-  "strip": [
-    {
-      "label": "Cow print French",
-      "image": "home-01.jpg"
-    },
-    {
-      "label": "Neon leopard",
-      "image": "home-02.jpg"
-    },
-    {
-      "label": "Dots & terracotta",
-      "image": "home-03.jpg"
-    }
-  ],
   "perks": [
     {
       "title": "5-Hour Validated Parking",
@@ -101,6 +95,20 @@
     {
       "title": "Groups & Events",
       "body": "Bridal, birthdays and corporate — extended Golden Hours by request."
+    }
+  ],
+  "strip": [
+    {
+      "label": "Cow print French",
+      "image": "home-01.jpg"
+    },
+    {
+      "label": "Neon leopard",
+      "image": "home-02.jpg"
+    },
+    {
+      "label": "Dots & terracotta",
+      "image": "home-03.jpg"
     }
   ]
 }
