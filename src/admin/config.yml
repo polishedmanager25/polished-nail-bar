@@ -312,6 +312,56 @@ collections:
           - { name: extra_knowledge, label: "Extra knowledge", widget: text, hint: "Anything not on the website \u2014 timings, what you don't offer, quirks. One fact per line." }
           - { name: handoff_text, label: "Handoff line", widget: string, hint: "What it says when it can't answer." }
 
+  # ---------------------------------------------------------------- SET 80
+  - name: set80
+    label: "Set 80 page"
+    files:
+      - name: set80
+        label: "Set 80 promo & lookbook"
+        file: "src/_data/set80.json"
+        description: "Everything on polishednailbardtla.com/set80. Add, remove or drag designs to reorder. Numbers (#1, #2...) follow the order automatically."
+        fields:
+          - { name: live, label: "Promo is running", widget: boolean, default: true, hint: "Untick when the promo ends. The page then shows a short 'Set 80 has wrapped' message instead of the offer." }
+          - { name: end_date, label: "Offer ends", widget: string, hint: "Type it how it should read, e.g. November 30, 2026" }
+          - { name: seo_description, label: "Google search description", widget: text, hint: "Keep it under 155 characters." }
+          - { name: cover, label: "Cover photo", widget: image, hint: "The big photo at the top. Wide (landscape) photos work best." }
+          - { name: kicker, label: "Small label above the headline", widget: string }
+          - { name: headline, label: "Headline", widget: string, hint: "Also used on the Book buttons, e.g. Book Set 80" }
+          - { name: intro, label: "Paragraph under the headline", widget: text }
+          - { name: price_title, label: "Price row \u2014 what's included", widget: string }
+          - { name: price_note, label: "Price row \u2014 small line under it", widget: string }
+          - { name: regular_price, label: "Regular price (red, crossed out)", widget: string, required: false, hint: "e.g. $85\u2013$90+. Leave blank to hide it." }
+          - { name: price, label: "Promo price", widget: string }
+          - { name: value_line, label: "Bold line under the price", widget: string, required: false }
+          - { name: tagline, label: "Gold line under the price", widget: string, required: false }
+          - name: steps
+            label: "How it works steps"
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { name: title, label: "Step", widget: string }
+              - { name: body, label: "Line under it", widget: string }
+          - { name: lookbook_intro, label: "Lookbook \u2014 intro", widget: text }
+          - { name: update_line, label: "Lookbook \u2014 gold line", widget: string, required: false }
+          - { name: photo_note, label: "Photo disclaimer box", widget: text, required: false }
+          - { name: inspo_note, label: "\"Have your own inspo?\" box", widget: text, required: false }
+          - { name: closeup_note, label: "Note shown under each close-up photo", widget: text, required: false }
+          - name: designs
+            label: "Lookbook designs"
+            label_singular: "design"
+            widget: list
+            summary: "{{fields.name}}"
+            hint: "Drag to reorder. Numbers update automatically."
+            fields:
+              - { name: name, label: "Design name", widget: string, hint: "e.g. Gold Starburst Gems" }
+              - { name: image, label: "Photo", widget: image, hint: "Portrait (tall) photos look best." }
+          - name: terms
+            label: "Fine print"
+            widget: list
+            field: { name: line, label: "Paragraph", widget: text }
+            hint: "Shown at the bottom, after 'Offer valid through [end date].'"
+          - { name: ended_message, label: "Message shown after the promo ends", widget: text }
+
   # --------------------------------------------------------- GROUP BOOKING
   - name: group_booking
     label: "Group Booking page"

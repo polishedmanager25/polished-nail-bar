@@ -1,0 +1,195 @@
+---
+layout: base.njk
+title: "Set 80 — Gel-X + Nail Art for $80 | Polished Nail Bar DTLA"
+permalink: /set80/
+eleventyComputed:
+  description: "{{ set80.seo_description }}"
+---
+{#- Everything on this page is edited in the admin panel under "Set 80 page".
+    Content lives in src/_data/set80.json. -#}
+{%- set s = set80 -%}
+<style>
+.s80{--g:#DCB63F;--gd:#A9821F;--mute:#a3a3a3;--rule:#2b2b2b;
+  --metal:linear-gradient(100deg,#8a6a12 0%,#DCB63F 14%,#F7E7A6 24%,#fffbe9 28%,#DCB63F 40%,#A9821F 55%,#F7E7A6 70%,#DCB63F 82%,#7d5f10 100%);
+  background:#000;color:#fff;font-family:"Archivo",Helvetica,Arial,sans-serif;font-size:17px;line-height:1.75;-webkit-font-smoothing:antialiased;padding-bottom:40px}
+.s80 *,.s80 *::before,.s80 *::after{box-sizing:border-box}
+.s80 img{max-width:100%;display:block}
+.s80 a{color:inherit}
+.s80 .pad{padding:0 20px;max-width:1100px;margin:0 auto}
+.s80 .lbl{font-size:12px;font-weight:500;letter-spacing:.32em;text-transform:uppercase;color:var(--mute);margin:0}
+.s80 .h{font-weight:700;text-transform:uppercase;letter-spacing:-.025em;line-height:.95;margin:0}
+.s80 .body{color:var(--mute);margin:0}
+.s80 .hero{width:100%;height:auto;max-width:1100px;margin:0 auto;aspect-ratio:3/2;object-fit:cover}
+.s80 .intro{padding-top:40px}
+.s80 .intro .h{font-size:clamp(46px,13.5vw,110px);margin:18px 0 22px}
+.s80 .rows{border-top:1.5px solid var(--g);margin:30px 0 0}
+.s80 .row{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:16px;padding:20px 0;border-bottom:1px solid var(--rule)}
+.s80 .row .h{font-size:clamp(20px,5.6vw,30px);letter-spacing:-.02em;line-height:1.1}
+.s80 .row .sub{display:block;font-weight:400;text-transform:none;letter-spacing:0;color:var(--mute);font-size:15px;line-height:1.5;margin-top:6px}
+.s80 .amts{width:100%;display:flex;align-items:baseline;justify-content:space-between;margin-top:14px}
+.s80 .was{color:#ff3b30;font-size:clamp(18px,5vw,24px);font-weight:700;white-space:nowrap;line-height:1.1}
+.s80 .was s{text-decoration-color:#ff3b30;text-decoration-thickness:3px}
+.s80 .amt{font-weight:700;font-size:clamp(44px,12vw,72px);line-height:.9;letter-spacing:-.03em}
+.s80 .value{margin:22px 0 0;font-weight:700}
+.s80 .tag{margin:14px 0 0;color:var(--g);font-size:12px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;line-height:1.7}
+.s80 .sec{padding-top:64px}
+.s80 .sec-top{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.s80 .sec-top a{font-size:12px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;text-decoration:none;border-bottom:1.5px solid var(--g);padding-bottom:6px;white-space:nowrap}
+.s80 .title{font-size:clamp(44px,12vw,92px);margin:18px 0}
+.s80 .steps{list-style:none;padding:0;margin:26px 0 0;border-top:1.5px solid var(--g)}
+.s80 .steps li{display:grid;grid-template-columns:56px 1fr;padding:18px 0;border-bottom:1px solid var(--rule);align-items:baseline}
+.s80 .steps .n{font-weight:700;font-size:28px}
+.s80 .steps strong{display:block;font-weight:700;text-transform:uppercase;letter-spacing:-.015em;font-size:20px;line-height:1.2}
+.s80 .steps em{font-style:normal;color:var(--mute);font-size:15px;line-height:1.6;display:block;margin-top:4px}
+.s80 .note{margin:22px 0 0;padding:16px 18px;border-left:3px solid var(--g);background:#111;color:var(--mute);font-size:15px;line-height:1.65}
+.s80 .note strong{color:#fff}
+.s80 .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:6px;margin-top:34px}
+@media (min-width:900px){.s80 .grid{grid-template-columns:repeat(4,1fr)}}
+.s80 .card{appearance:none;border:0;background:none;padding:0;margin:0;text-align:left;font:inherit;color:inherit;cursor:pointer;display:block;width:100%}
+.s80 .ph{display:block;aspect-ratio:4/5;overflow:hidden;background:#141414}
+.s80 .ph img{width:100%;height:100%;object-fit:cover}
+.s80 .meta{display:block;padding:18px 16px 30px}
+.s80 .meta .lbl{display:block;font-size:10.5px;letter-spacing:.26em;line-height:1.5;min-height:3em}
+.s80 .line{display:flex;justify-content:space-between;align-items:baseline;margin-top:6px}
+.s80 .num{font-weight:700;font-size:clamp(38px,11vw,54px);letter-spacing:-.03em;line-height:1}
+.s80 .px{font-weight:600;font-size:14px;letter-spacing:.14em}
+.s80 .terms{padding-top:22px;border-top:1px solid var(--rule);margin-top:10px}
+.s80 .terms p{color:var(--mute);font-size:15px;line-height:1.75;margin:0 0 10px;max-width:60ch}
+.s80 .cta{display:inline-flex;align-items:center;justify-content:center;background:var(--metal);color:#1a1406;text-decoration:none;font-size:13px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;padding:24px 34px;margin:26px 0 0}
+.s80-bar{position:fixed;left:0;right:0;bottom:0;z-index:40;background:#0b0b0b;color:#fff;padding-bottom:env(safe-area-inset-bottom,0px);font-family:"Archivo",Helvetica,Arial,sans-serif}
+.s80-bar::before{content:"";display:block;height:3px;background:linear-gradient(100deg,#8a6a12,#DCB63F,#F7E7A6,#DCB63F,#7d5f10)}
+.s80-bar .in{max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:12px;padding:12px 20px}
+.s80-bar .msg{flex:1;min-width:0;font-size:13px;line-height:1.35;color:#bdbdbd}
+.s80-bar .msg strong{display:block;color:#fff;font-weight:700;text-transform:uppercase;font-size:16px}
+.s80-bar a{background:linear-gradient(100deg,#8a6a12,#DCB63F 20%,#F7E7A6 35%,#DCB63F 55%,#A9821F 80%);color:#1a1406;text-decoration:none;font-size:12px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;padding:16px 20px;white-space:nowrap}
+.s80-v{border:1px solid #2b2b2b;padding:0;border-radius:0;width:min(94vw,540px);max-height:92vh;overflow:auto;background:#0b0b0b;color:#fff;font-family:"Archivo",Helvetica,Arial,sans-serif}
+.s80-v::backdrop{background:rgba(0,0,0,.82)}
+.s80-v img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block}
+.s80-v .b{padding:22px}
+.s80-v .lbl{font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:#a3a3a3;margin:0}
+.s80-v h3{font-weight:700;text-transform:uppercase;letter-spacing:-.025em;line-height:.95;font-size:46px;margin:8px 0 14px}
+.s80-v .vn{margin:0 0 18px;color:#a3a3a3;font-size:13px;line-height:1.6;border-left:2px solid #DCB63F;padding-left:12px}
+.s80-v button{width:100%;font:inherit;font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;padding:18px 10px;cursor:pointer;border:1.5px solid #fff;background:transparent;color:#fff}
+body.has-s80-bar{padding-bottom:84px}
+</style>
+
+<div class="s80">
+{%- if s.live %}
+
+  {%- if s.cover %}<img class="hero" src="{{ s.cover }}" alt="Set 80 — Gel-X with nail art at Polished Nail Bar" width="1536" height="1024">{% endif %}
+
+  <section class="pad intro">
+    <p class="lbl">01 — {{ s.kicker }}</p>
+    <h1 class="h">{{ s.headline }}</h1>
+    <p class="body">{{ s.intro }}</p>
+    <div class="rows">
+      <div class="row">
+        <span class="h">{{ s.price_title }}<span class="sub">{{ s.price_note }}</span></span>
+        <span class="amts">
+          {%- if s.regular_price %}<span class="was">Regularly <s>{{ s.regular_price }}</s></span>{% else %}<span></span>{% endif %}
+          <span class="amt">{{ s.price }}</span>
+        </span>
+      </div>
+    </div>
+    {%- if s.value_line %}<p class="value">{{ s.value_line }}</p>{% endif %}
+    {%- if s.tagline %}<p class="tag">{{ s.tagline }}</p>{% endif %}
+  </section>
+
+  <section class="pad sec">
+    <p class="lbl">02 — How It Works</p>
+    <ol class="steps">
+      {%- for st in s.steps %}
+      <li><span class="n">{{ loop.index }}</span><span><strong>{{ st.title }}</strong><em>{{ st.body }}</em></span></li>
+      {%- endfor %}
+    </ol>
+  </section>
+
+  <section class="sec" id="lookbook">
+    <div class="pad">
+      <div class="sec-top"><p class="lbl">03 — The Lookbook</p><a href="{{ site.booking_services_url or site.booking_url }}" target="_blank" rel="noopener">Book now</a></div>
+      <h2 class="h title">Find Your Look</h2>
+      <p class="body">{{ s.lookbook_intro }}</p>
+      {%- if s.update_line %}<p class="tag">✦ {{ s.update_line }}</p>{% endif %}
+      {%- if s.photo_note %}<p class="note"><strong>Photos are for inspiration only.</strong> {{ s.photo_note }}</p>{% endif %}
+      {%- if s.inspo_note %}<p class="note"><strong>Have your own inspo?</strong> {{ s.inspo_note }}</p>{% endif %}
+    </div>
+    <div class="grid">
+      {%- for d in s.designs %}
+      <button class="card" type="button" data-n="{{ loop.index }}" data-name="{{ d.name }}" data-img="{{ d.image }}">
+        <span class="ph"><img src="{{ d.image }}" alt="Design #{{ loop.index }}: {{ d.name }}" loading="lazy" width="720" height="900"></span>
+        <span class="meta"><span class="lbl">{{ d.name }}</span><span class="line"><span class="num">#{{ loop.index }}</span><span class="px">{{ s.price }}</span></span></span>
+      </button>
+      {%- endfor %}
+    </div>
+  </section>
+
+  <section class="pad terms">
+    <p>Offer valid through {{ s.end_date }}.</p>
+    {%- for t in s.terms %}<p>{{ t }}</p>{% endfor %}
+    <a class="cta" href="{{ site.booking_services_url or site.booking_url }}" target="_blank" rel="noopener">Book {{ s.headline }}</a>
+  </section>
+
+</div>
+
+<div class="s80-bar" id="s80bar">
+  <div class="in">
+    <div class="msg"><strong>{{ s.headline }} · {{ s.price }}</strong>Art included</div>
+    <a href="{{ site.booking_services_url or site.booking_url }}" target="_blank" rel="noopener">Book Now</a>
+  </div>
+</div>
+
+<dialog class="s80-v" id="s80v" aria-labelledby="s80vt">
+  <img id="s80vi" alt="">
+  <div class="b">
+    <p class="lbl" id="s80vn"></p>
+    <h3 id="s80vt"></h3>
+    {%- if s.closeup_note %}<p class="vn">{{ s.closeup_note }}</p>{% endif %}
+    <button type="button" id="s80vc">Close</button>
+  </div>
+</dialog>
+
+<script>
+(function(){
+  var v=document.getElementById('s80v'),vi=document.getElementById('s80vi');
+  document.querySelectorAll('.s80 .card').forEach(function(c){
+    c.addEventListener('click',function(){
+      vi.src=c.dataset.img; vi.alt='Design #'+c.dataset.n+': '+c.dataset.name;
+      document.getElementById('s80vn').textContent=c.dataset.name;
+      document.getElementById('s80vt').textContent='Design #'+c.dataset.n;
+      if(v.showModal){v.showModal();}else{window.open(c.dataset.img,'_blank');}
+    });
+  });
+  document.getElementById('s80vc').onclick=function(){v.close();};
+  v.addEventListener('click',function(e){if(e.target===v)v.close();});
+
+  /* Keep the Book bar and the chat bubble from overlapping:
+     anything else fixed to the bottom of the screen gets lifted above the bar. */
+  var bar=document.getElementById('s80bar');
+  document.body.classList.add('has-s80-bar');
+  function lift(){
+    var h=bar.offsetHeight;
+    document.querySelectorAll('body *').forEach(function(el){
+      if(el===bar||bar.contains(el)||el.tagName==='DIALOG'||el.dataset.s80lifted)return;
+      var cs=getComputedStyle(el);
+      if(cs.position!=='fixed')return;
+      var b=parseFloat(cs.bottom);
+      if(isNaN(b)||b>120||cs.top!=='auto'&&parseFloat(cs.top)<10)return;
+      el.style.bottom=(b+h)+'px'; el.dataset.s80lifted='1';
+    });
+  }
+  window.addEventListener('load',lift);
+  new MutationObserver(lift).observe(document.body,{childList:true,subtree:true});
+})();
+</script>
+
+{%- else %}
+
+  <section class="pad intro" style="padding-bottom:60px">
+    <p class="lbl">{{ s.kicker }}</p>
+    <h1 class="h">{{ s.headline }}</h1>
+    <p class="body">{{ s.ended_message }}</p>
+    <a class="cta" href="/the-latest/">See The Latest</a>
+  </section>
+</div>
+
+{%- endif %}
