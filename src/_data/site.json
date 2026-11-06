@@ -6,15 +6,10 @@
   "text_display": "323-379-3469",
   "text_link": "+13233793469",
   "email": "polishednailbar.dtla@gmail.com",
+  "ga_id": "G-62WJ1WYLE4",
   "address_line1": "215 W 6th St, R-114",
   "address_line2": "Los Angeles, CA 90014",
   "neighborhood": "Historic Core, Downtown LA",
-  "booking_url": "https://polisheddtla.glossgenius.com",
-  "booking_services_url": "https://polisheddtla.glossgenius.com/services",
-  "instagram_url": "https://www.instagram.com/polished_dtla/",
-  "google_url": "https://www.google.com/maps/search/Polished+Nail+Bar+DTLA",
-  "yelp_url": "https://www.yelp.com/biz/polished-nail-bar-los-angeles",
-  "directions_url": "https://www.google.com/maps/dir/?api=1&destination=Polished+Nail+Bar+215+W+6th+St+R-114+Los+Angeles+CA+90014",
   "hours_weekday": "Monday – Saturday · 9 AM – 7:30 PM",
   "hours_sunday": "Sunday · 9 AM – 6 PM",
   "google_rating": "4.8",
@@ -27,6 +22,7 @@
   "rewards_name": "Ca$H Loyalty Rewards",
   "rewards_note": "$50 head start",
   "promo_bar": [
+    "<a href=\"/set80/\">SET 80 · $80 — Tap to see the lookbook</a>",
     "New here — ask about your $50 rewards head start",
     "5-hour validated parking with a $100+ cash purchase",
     "Group bookings & events — bridal, birthdays & more",
@@ -35,5 +31,10 @@
   "service_band_words": "Gel X — Hard Gel — BIAB — Acrylic",
   "service_band_accent": "Nail Art",
   "service_band_tail": "Pedicures",
-  "ga_id": "G-62WJ1WYLE4"
+  "booking_url": "https://polisheddtla.glossgenius.com",
+  "booking_services_url": "https://polisheddtla.glossgenius.com/services",
+  "instagram_url": "https://www.instagram.com/polished_dtla/",
+  "google_url": "https://www.google.com/maps/search/Polished+Nail+Bar+DTLA",
+  "yelp_url": "https://www.yelp.com/biz/polished-nail-bar-los-angeles",
+  "directions_url": "https://www.google.com/maps/dir/?api=1&destination=Polished+Nail+Bar+215+W+6th+St+R-114+Los+Angeles+CA+90014"
 }
