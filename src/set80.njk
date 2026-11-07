@@ -19,7 +19,7 @@ eleventyComputed:
 .s80 .lbl{font-size:12px;font-weight:500;letter-spacing:.32em;text-transform:uppercase;color:var(--mute);margin:0}
 .s80 .h{font-weight:700;text-transform:uppercase;letter-spacing:-.025em;line-height:.95;margin:0}
 .s80 .body{color:var(--mute);margin:0}
-.s80 .hero{width:100%;height:auto;max-width:1100px;margin:0 auto;aspect-ratio:3/2;object-fit:cover}
+.s80 .s80-cover{display:block;width:100%;height:auto !important;min-height:0 !important;max-height:none !important;max-width:1100px;margin:0 auto}
 .s80 .intro{padding-top:40px}
 .s80 .intro .h{font-size:clamp(46px,13.5vw,110px);margin:18px 0 22px}
 .s80 .rows{border-top:1.5px solid var(--g);margin:30px 0 0}
@@ -76,7 +76,7 @@ body.has-s80-bar{padding-bottom:84px}
 <div class="s80">
 {%- if s.live %}
 
-  {%- if s.cover %}<img class="hero" src="{{ s.cover }}" alt="Set 80 — Gel-X with nail art at Polished Nail Bar" width="1536" height="1024">{% endif %}
+  {%- if s.cover %}<img class="s80-hero" src="{{ s.cover }}" alt="Set 80 — Gel-X with nail art at Polished Nail Bar" width="1536" height="1024">{% endif %}
 
   <section class="pad intro">
     <p class="lbl">01 — {{ s.kicker }}</p>
