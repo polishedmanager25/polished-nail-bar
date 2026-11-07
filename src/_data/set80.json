@@ -1,7 +1,8 @@
 {
   "live": true,
+  "end_date": "November 30, 2026",
   "seo_description": "Set 80 at Polished Nail Bar DTLA: a short Gel-X full set with nail art on 1–2 nails for $80. Browse the lookbook. Through November 30, 2026.",
-  "cover": "/images/set80/set80-cover.jpg",
+  "cover": "/images/BE38773C-85F8-41AB-BABA-4FF13039969D.png",
   "kicker": "The Holiday Edit",
   "headline": "Set 80",
   "intro": "One price, endless looks. Book your Gel-X set, then bring your favorite from the lookbook below. Our artists handle the rest.",
@@ -30,13 +31,6 @@
   "photo_note": "Our lookbook images are digitally enhanced, so your set will look a little different in person. Length, shape and color will vary based on your natural nails and the shades you choose. Set 80 is a short Gel-X set with art on 1 or 2 nails, depending on the style.",
   "inspo_note": "Bring it! Your artist will check if it fits Set 80 and let you know before starting.",
   "closeup_note": "Photo for inspiration only. Digitally enhanced; your length, shape and color will vary in person. Set 80 is short Gel-X with art on 1–2 nails.",
-  "end_date": "November 30, 2026",
-  "terms": [
-    "Set 80 includes a short Gel-X full set with nail art on 1 or 2 nails, depending on the style. Lookbook photos are digitally enhanced and for reference only. Final results vary with your nail length, shape and color choice.",
-    "Longer length, additional nail art, or designs outside the lookbook are priced separately. Removal of existing product is an additional charge.",
-    "Have your own inspo? Bring it in! Your artist will take a look, and if it fits the Set 80 vibe, we’ll make it work. If not, we’ll let you know the price before we start."
-  ],
-  "ended_message": "Set 80 has wrapped for now. Thank you for the love! See what’s new on The Latest, or book your next set.",
   "designs": [
     {
       "name": "Peppermint Swirl",
@@ -166,5 +160,11 @@
       "name": "Fawn Spots",
       "image": "/images/set80/set80-32.jpg"
     }
-  ]
+  ],
+  "terms": [
+    "Set 80 includes a short Gel-X full set with nail art on 1 or 2 nails, depending on the style. Lookbook photos are digitally enhanced and for reference only. Final results vary with your nail length, shape and color choice.",
+    "Longer length, additional nail art, or designs outside the lookbook are priced separately. Removal of existing product is an additional charge.",
+    "Have your own inspo? Bring it in! Your artist will take a look, and if it fits the Set 80 vibe, we’ll make it work. If not, we’ll let you know the price before we start."
+  ],
+  "ended_message": "Set 80 has wrapped for now. Thank you for the love! See what’s new on The Latest, or book your next set."
 }
