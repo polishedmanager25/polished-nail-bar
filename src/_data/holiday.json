@@ -177,6 +177,13 @@
       "tier": "Glam",
       "occasion": "December Holidays",
       "show": true
+    },
+    {
+      "image": "/images/holiday/IMG_6733.webp",
+      "name": "Fancy Bow & Gold Glitter",
+      "tier": "Simple",
+      "occasion": "December Holidays",
+      "show": true
     }
   ],
   "prices": {
