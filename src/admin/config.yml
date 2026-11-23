@@ -414,3 +414,65 @@ collections:
             fields:
               - { name: title, label: "Heading", widget: string }
               - { name: body, label: "Wording", widget: text }
+                # ---- HOLIDAY SET PAGE ----
+  # Paste everything below at the very bottom of your admin config.yml (it belongs under "collections:").
+  - name: holiday_set
+    label: "Holiday Set page"
+    media_folder: /src/images/holiday
+    public_folder: /images/holiday
+    files:
+      - name: holiday
+        label: "Holiday Set — photos, prices & text"
+        file: src/_data/holiday.json
+        fields:
+          - label: "Occasions showing on the page right now"
+            name: occasions_on_page
+            widget: select
+            multiple: true
+            dropdown_threshold: 20
+            hint: "Tick the holidays clients should see. Unticked holidays stay saved but hidden."
+            options: &occasions ["December Holidays", "New Year", "Valentine's", "St. Patrick's", "Spring", "Easter", "Mother's Day", "Summer", "4th of July", "Back to School", "Fall", "Halloween", "Thanksgiving"]
+          - label: "Lookbook designs"
+            name: designs
+            widget: list
+            summary: "{{fields.name}} — {{fields.tier}} · {{fields.occasion}}"
+            hint: "Add a design, upload the photo, pick tier + occasion, then Publish. Drag to reorder."
+            fields:
+              - label: Photo
+                name: image
+                widget: image
+                # (auto-shrinks uploaded photos. If the admin panel shows an error after pasting, delete these 8 lines from 'media_library:' down to 'height: 1400')
+                media_library:
+                  config:
+                    transformations:
+                      raster_image:
+                        format: webp
+                        quality: 85
+                        width: 1400
+                        height: 1400
+              - { label: "Design name", name: name, widget: string }
+              - { label: Tier, name: tier, widget: select, options: ["Simple", "Classic", "Glam"] }
+              - { label: Occasion, name: occasion, widget: select, dropdown_threshold: 20, options: *occasions }
+              - { label: "Show on page", name: show, widget: boolean, default: true }
+          - label: Prices
+            name: prices
+            widget: object
+            fields:
+              - { label: "Simple ($)", name: simple, widget: number, value_type: int }
+              - { label: "Classic ($)", name: classic, widget: number, value_type: int }
+              - { label: "Glam ($)", name: glam, widget: number, value_type: int }
+          - { label: "Tab that opens first", name: default_tier, widget: select, options: ["Simple", "Classic", "Glam"] }
+          - { label: "Page name", name: page_title, widget: string }
+          - { label: "Small line above the headline", name: eyebrow, widget: string }
+          - { label: "Tagline under the headline", name: tagline, widget: text }
+          - { label: "Top photo", name: hero_image, widget: image }
+          - { label: "Booking link", name: book_url, widget: string }
+          - { label: "Google description", name: meta_description, widget: text }
+          - { label: "Note under prices", name: price_note, widget: string }
+          - { label: "How it works (steps)", name: steps, widget: list, field: { label: Step, name: step, widget: string } }
+          - { label: "Lookbook intro", name: lookbook_intro, widget: text }
+          - { label: "New designs line", name: new_designs_note, widget: string }
+          - { label: "Photo disclaimer", name: photo_disclaimer, widget: text }
+          - { label: "Have your own inspo text", name: inspo_note, widget: text }
+          - { label: "Fine print", name: fine_print, widget: text }
+
