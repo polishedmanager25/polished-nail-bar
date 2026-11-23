@@ -6,7 +6,7 @@
     {
       "image": "/images/holiday/holiday-01.jpg",
       "name": "Gift Box Accent",
-      "tier": "Simple",
+      "tier": "Glam",
       "occasion": "December Holidays",
       "show": true
     },
@@ -245,6 +245,69 @@
       "image": "/images/holiday/IMG_6958.webp",
       "name": "Gold shinny & Red chrome ribbons",
       "tier": "Glam",
+      "occasion": "December Holidays",
+      "show": true
+    },
+    {
+      "image": "/images/holiday/IMG_6484.webp",
+      "name": "Holly & Plaid",
+      "tier": "Classic",
+      "occasion": "December Holidays",
+      "show": true
+    },
+    {
+      "image": "/images/holiday/IMG_1428.webp",
+      "name": "Emerald Gift & French",
+      "tier": "Simple",
+      "occasion": "December Holidays",
+      "show": true
+    },
+    {
+      "image": "/images/holiday/IMG_1424.webp",
+      "name": "Cateye & Ribbon",
+      "tier": "Simple",
+      "occasion": "December Holidays",
+      "show": true
+    },
+    {
+      "image": "/images/holiday/328AD3E9-F87B-413E-9FD1-79CC556C86BE.webp",
+      "name": "Red wine 3D florals",
+      "tier": "Glam",
+      "occasion": "December Holidays",
+      "show": true
+    },
+    {
+      "image": "/images/holiday/54B39158-4EEF-441C-B0D7-EB156CCE1E8D.webp",
+      "name": "Gold stars",
+      "tier": "Simple",
+      "occasion": "December Holidays",
+      "show": true
+    },
+    {
+      "image": "/images/holiday/0E15E38C-59C1-4215-9AC8-B8E13D6DAF28.webp",
+      "name": "Cateye & brown",
+      "tier": "Simple",
+      "occasion": "December Holidays",
+      "show": true
+    },
+    {
+      "image": "/images/holiday/CD3B22A9-31D5-4AB3-BEAA-F5A42D068DA9.webp",
+      "name": "Detail snowman",
+      "tier": "Simple",
+      "occasion": "December Holidays",
+      "show": true
+    },
+    {
+      "image": "/images/holiday/4BD77DB9-FF1E-40E9-A94C-A79CEAE48414.webp",
+      "name": "Ginger bread",
+      "tier": "Classic",
+      "occasion": "December Holidays",
+      "show": true
+    },
+    {
+      "image": "/images/holiday/E270301A-5E3E-44AD-B0CB-4F28E2FD9EE0.webp",
+      "name": "Red cateye & plaid",
+      "tier": "Classic",
       "occasion": "December Holidays",
       "show": true
     }
