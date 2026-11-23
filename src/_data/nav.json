@@ -2,7 +2,6 @@
   { "label": "Home",          "url": "/" },
   { "label": "About",         "url": "/about/" },
   { "label": "Services",      "url": "/services/" },
-  { "label": "Set 80",        "url": "/set80/" },
   { "label": "Holiday Set",   "url": "/holiday-set/" },
   { "label": "Gallery",       "url": "/gallery/" },
   { "label": "Reviews",       "url": "/reviews/" },
