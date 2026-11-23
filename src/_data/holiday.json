@@ -1,0 +1,205 @@
+{
+  "page_title": "Holiday Set",
+  "meta_description": "The Holiday Set at Polished Nail Bar DTLA: short Gel-X with nail art from our holiday lookbook, from $85.",
+  "eyebrow": "The Holiday Edit",
+  "tagline": "Pick your look from our holiday lookbook, and we'll bring it to life on a short Gel-X set. Art included.",
+  "hero_image": "/images/BE38773C-85F8-41AB-BABA-4FF13039969D.png",
+  "book_url": "https://polisheddtla.glossgenius.com/services",
+  "prices": {
+    "simple": 85,
+    "classic": 95,
+    "glam": 110
+  },
+  "default_tier": "Classic",
+  "price_note": "Short Gel-X full set + nail art. Tap a tier to see its looks.",
+  "steps": [
+    "Book your tier on GlossGenius.",
+    "Browse the lookbook and save your favorites.",
+    "Show your artist at your appointment."
+  ],
+  "lookbook_intro": "Tap a tier, then tap any design to see it up close. Just for inspiration — you book your tier, then pick your look at your appointment.",
+  "new_designs_note": "New designs added to the lookbook all the time. Check back often.",
+  "photo_disclaimer": "Our lookbook images are digitally enhanced, so your set will look a little different in person. Length, shape and color will vary based on your natural nails and the shades you choose. The Holiday Set is a short Gel-X set — some looks are shown on longer nails.",
+  "inspo_note": "Bring it! Your artist will check which tier it fits and let you know before starting.",
+  "fine_print": "Lookbook photos are for inspiration; results vary. Upgrades, extra length and removal are priced separately.",
+  "occasions_on_page": [
+    "December Holidays"
+  ],
+  "designs": [
+    {
+      "image": "/images/holiday/holiday-01.jpg",
+      "name": "Gift Box Accent",
+      "tier": "Simple",
+      "occasion": "December Holidays",
+      "show": true
+    },
+    {
+      "image": "/images/holiday/holiday-02.jpg",
+      "name": "Gingerbread Icing",
+      "tier": "Simple",
+      "occasion": "December Holidays",
+      "show": true
+    },
+    {
+      "image": "/images/holiday/holiday-03.jpg",
+      "name": "Cocoa & Cream Bow",
+      "tier": "Simple",
+      "occasion": "December Holidays",
+      "show": true
+    },
+    {
+      "image": "/images/holiday/holiday-04.jpg",
+      "name": "Peppermint Candy",
+      "tier": "Simple",
+      "occasion": "December Holidays",
+      "show": true
+    },
+    {
+      "image": "/images/holiday/holiday-05.jpg",
+      "name": "Champagne Red Bow",
+      "tier": "Simple",
+      "occasion": "December Holidays",
+      "show": true
+    },
+    {
+      "image": "/images/holiday/holiday-06.jpg",
+      "name": "Candy Cane Stripe",
+      "tier": "Simple",
+      "occasion": "December Holidays",
+      "show": true
+    },
+    {
+      "image": "/images/holiday/holiday-07.jpg",
+      "name": "Mistletoe Nude",
+      "tier": "Simple",
+      "occasion": "December Holidays",
+      "show": true
+    },
+    {
+      "image": "/images/holiday/holiday-08.jpg",
+      "name": "Wine & Pearl Dots",
+      "tier": "Simple",
+      "occasion": "December Holidays",
+      "show": true
+    },
+    {
+      "image": "/images/holiday/holiday-09.jpg",
+      "name": "Candy Stripe Bow French",
+      "tier": "Classic",
+      "occasion": "December Holidays",
+      "show": true
+    },
+    {
+      "image": "/images/holiday/holiday-10.jpg",
+      "name": "Garland Star & Tree",
+      "tier": "Classic",
+      "occasion": "December Holidays",
+      "show": true
+    },
+    {
+      "image": "/images/holiday/holiday-11.jpg",
+      "name": "Reindeer Glitter",
+      "tier": "Classic",
+      "occasion": "December Holidays",
+      "show": true
+    },
+    {
+      "image": "/images/holiday/holiday-12.jpg",
+      "name": "Gold Reindeer & Holly",
+      "tier": "Classic",
+      "occasion": "December Holidays",
+      "show": true
+    },
+    {
+      "image": "/images/holiday/holiday-13.jpg",
+      "name": "Holly Berry Nude",
+      "tier": "Classic",
+      "occasion": "December Holidays",
+      "show": true
+    },
+    {
+      "image": "/images/holiday/holiday-14.jpg",
+      "name": "Emerald Ribbon",
+      "tier": "Glam",
+      "occasion": "December Holidays",
+      "show": true
+    },
+    {
+      "image": "/images/holiday/holiday-15.jpg",
+      "name": "Candy Stripe Gold Bow",
+      "tier": "Glam",
+      "occasion": "December Holidays",
+      "show": true
+    },
+    {
+      "image": "/images/holiday/holiday-16.jpg",
+      "name": "Emerald Silver Butterfly",
+      "tier": "Glam",
+      "occasion": "December Holidays",
+      "show": true
+    },
+    {
+      "image": "/images/holiday/holiday-17.jpg",
+      "name": "Black Gold Holly",
+      "tier": "Glam",
+      "occasion": "December Holidays",
+      "show": true
+    },
+    {
+      "image": "/images/holiday/holiday-18.jpg",
+      "name": "Snowman & Pine",
+      "tier": "Glam",
+      "occasion": "December Holidays",
+      "show": true
+    },
+    {
+      "image": "/images/holiday/holiday-19.jpg",
+      "name": "Rudolph Stiletto",
+      "tier": "Glam",
+      "occasion": "December Holidays",
+      "show": true
+    },
+    {
+      "image": "/images/holiday/holiday-20.jpg",
+      "name": "Pine & Berry French",
+      "tier": "Glam",
+      "occasion": "December Holidays",
+      "show": true
+    },
+    {
+      "image": "/images/holiday/holiday-21.jpg",
+      "name": "Cherry Candy Cane",
+      "tier": "Glam",
+      "occasion": "December Holidays",
+      "show": true
+    },
+    {
+      "image": "/images/holiday/holiday-22.jpg",
+      "name": "Rudolph & Gingerbread",
+      "tier": "Glam",
+      "occasion": "December Holidays",
+      "show": true
+    },
+    {
+      "image": "/images/holiday/holiday-23.jpg",
+      "name": "Gold Bow Shimmer French",
+      "tier": "Glam",
+      "occasion": "December Holidays",
+      "show": true
+    },
+    {
+      "image": "/images/holiday/holiday-24.jpg",
+      "name": "Poinsettia French",
+      "tier": "Glam",
+      "occasion": "December Holidays",
+      "show": true
+    },
+    {
+      "image": "/images/holiday/holiday-25.jpg",
+      "name": "Emerald Gold Star Bow",
+      "tier": "Glam",
+      "occasion": "December Holidays",
+      "show": true
+    }
+  ]
+}

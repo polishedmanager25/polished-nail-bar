@@ -1,0 +1,500 @@
+---
+permalink: /holiday-set/index.html
+layout: false
+eleventyExcludeFromCollections: false
+---
+{%- set hs = holiday -%}
+{% set tiers = [["simple","Simple",hs.prices.simple],["classic","Classic",hs.prices.classic],["glam","Glam",hs.prices.glam]] %}{% set deftier = (hs.default_tier or "Classic") | lower %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ hs.page_title }} — Gel-X + Nail Art from ${{ hs.prices.simple }} | Polished Nail Bar DTLA</title>
+<meta name="description" content="{{ hs.meta_description }}">
+<link rel="canonical" href="https://polishednailbardtla.com/holiday-set/">
+<meta property="og:title" content="{{ hs.page_title }} — Gel-X + Nail Art from ${{ hs.prices.simple }} | Polished Nail Bar DTLA">
+<meta property="og:description" content="Short Gel-X with nail art from our lookbook. Simple ${{ hs.prices.simple }} · Classic ${{ hs.prices.classic }} · Glam ${{ hs.prices.glam }}.">
+<meta property="og:url" content="https://polishednailbardtla.com/holiday-set/">
+<meta property="og:image" content="https://polishednailbardtla.com{{ hs.hero_image }}">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..900&family=Cormorant+Garamond:ital,wght@1,600&display=swap" rel="stylesheet">
+<!-- GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-62WJ1WYLE4"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-62WJ1WYLE4');</script>
+{% raw %}<style>
+:root{--ink:#141414;--white:#fff;--gold:#DCB63F;--gold-grad:linear-gradient(135deg,#F7E7A6 0%,#DCB63F 50%,#A9821F 100%);--coral:#F4B3AC;--sage:#C6D3C0;--line:#e7e7e7;--soft:#f7f7f5}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Jost',system-ui,sans-serif;color:var(--ink);background:var(--white);font-size:17px;line-height:1.55;padding-bottom:76px}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+.display{font-family:'Anton',Impact,sans-serif;font-weight:400;letter-spacing:.01em;line-height:.95}
+.accent{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:15px 26px;border-radius:999px;font-weight:600;font-size:15px;text-decoration:none;letter-spacing:.02em;transition:transform .2s,box-shadow .2s}
+.btn-gold{background:var(--gold-grad);color:var(--ink);box-shadow:0 6px 18px rgba(169,130,31,.28)}
+.btn-dark{background:var(--ink);color:#fff}
+.btn-line{border:2px solid var(--ink);color:var(--ink)}
+.btn:hover{transform:translateY(-2px)}
+
+/* banner */
+.banner{background:var(--ink);color:#fff;overflow:hidden;white-space:nowrap;font-size:13px;font-weight:600;letter-spacing:.12em}
+.banner a{text-decoration:none}
+.marquee{display:inline-flex;animation:scroll 38s linear infinite;padding:10px 0}
+.marquee span{padding:0 28px}
+.marquee .hl{background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* header */
+header.site{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.hdr{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo img{height:44px;width:auto}
+nav.main{display:flex;gap:18px;font-size:14px;font-weight:500;white-space:nowrap}
+nav.main a{text-decoration:none;padding:6px 0;position:relative}
+nav.main a[aria-current]{font-weight:700}
+nav.main a[aria-current]::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--gold-grad)}
+.hdr .btn{padding:11px 20px;font-size:14px}
+.menu-btn{display:none;background:none;border:0;font:600 14px 'Jost',sans-serif;cursor:pointer}
+@media(max-width:1240px){nav.main{display:none;position:absolute;top:68px;left:0;right:0;background:#fff;flex-direction:column;gap:0;padding:8px 22px 18px;border-bottom:1px solid var(--line)}nav.main.open{display:flex}nav.main a{padding:11px 0;border-bottom:1px solid var(--soft)}.menu-btn{display:block}.hdr .btn{display:none}}
+
+/* hero */
+.hero{padding:56px 0 40px}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center}
+.eyebrow{font-size:13px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#6b6b6b;margin-bottom:16px}
+.hero h1{font-size:clamp(64px,10vw,132px);text-transform:uppercase}
+.hero h1 .g{background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.lede{font-size:clamp(19px,2vw,23px);font-weight:500;max-width:30ch;margin:22px 0 28px}
+.hero .from{display:block;font-size:28px;margin-bottom:22px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.hero-img{border-radius:22px;overflow:hidden;aspect-ratio:4/5;background:var(--soft)}
+.hero-img img{width:100%;height:100%;object-fit:cover}
+@media(max-width:820px){.hero-grid{grid-template-columns:1fr}.hero{padding-top:34px}.hero-img{aspect-ratio:4/3;order:-1}}
+
+section{padding:56px 0}
+.sec-num{font-size:13px;font-weight:700;letter-spacing:.18em;color:#6b6b6b;margin-bottom:10px}
+h2{font-size:clamp(40px,5.5vw,68px);text-transform:uppercase;margin-bottom:26px}
+
+/* prices */
+.prices{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.price-card{display:flex;flex-direction:column;gap:4px;padding:26px 24px;border:2px solid var(--ink);border-radius:20px;text-decoration:none;transition:transform .2s,background .2s}
+.price-card:hover{transform:translateY(-3px);background:var(--soft)}
+.pc-l{font-size:15px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+.pc-p{font-family:'Anton',sans-serif;font-size:62px;line-height:1}
+.pc-go{font-size:14px;font-weight:600;margin-top:8px}
+.price-card:nth-child(3){background:var(--ink);color:#fff}
+.price-card:nth-child(3) .pc-p{background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.price-card:nth-child(3):hover{background:#222}
+.price-note{margin-top:16px;font-size:15px;color:#4a4a4a}
+@media(max-width:720px){.prices{grid-template-columns:1fr}.pc-p{font-size:52px}}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;list-style:none;counter-reset:s}
+.steps li{background:var(--soft);border-radius:20px;padding:26px 24px;font-size:19px;font-weight:600;counter-increment:s}
+.steps li::before{content:"0" counter(s);display:block;font-family:'Anton',sans-serif;font-size:44px;line-height:1;margin-bottom:12px;background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+@media(max-width:720px){.steps{grid-template-columns:1fr}}
+
+/* lookbook + tabs */
+.lb-intro{max-width:60ch;margin:-8px 0 26px;color:#3a3a3a}
+.tabbar{position:sticky;top:68px;z-index:30;background:#fff;padding:12px 0;margin-bottom:22px;border-bottom:1px solid var(--line)}
+.tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;background:var(--soft);padding:6px;border-radius:999px;max-width:620px}
+.tab{border:0;background:transparent;border-radius:999px;padding:13px 10px;font:700 15px 'Jost',sans-serif;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;color:var(--ink);display:flex;justify-content:center;gap:8px;align-items:baseline;transition:background .2s,color .2s}
+.tab .tab-p{font-weight:500;letter-spacing:0;opacity:.75}
+.tab[aria-selected="true"]{background:var(--ink);color:#fff}
+.tab[aria-selected="true"] .tab-p{opacity:1;background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.tab:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+@media(max-width:520px){.tab{flex-direction:column;align-items:center;gap:0;padding:9px 6px;font-size:13px}.tabbar{top:68px}}
+.panel-head{display:flex;gap:12px;align-items:baseline;margin-bottom:18px;font-size:18px}
+.panel-head span{color:#6b6b6b;font-size:15px}
+.grid{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:22px 18px}
+@media(max-width:980px){.grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:640px){.grid{grid-template-columns:repeat(2,1fr);gap:18px 12px}}
+.card-btn{display:block;width:100%;border:0;padding:0;background:var(--soft);border-radius:16px;overflow:hidden;aspect-ratio:4/5;cursor:zoom-in}
+.card-btn img{width:100%;height:100%;object-fit:cover;transition:transform .35s}
+.card-btn:hover img{transform:scale(1.05)}
+.card-txt{display:flex;gap:8px;align-items:baseline;margin-top:10px;font-weight:600;font-size:16px;line-height:1.25}
+.num{font-family:'Anton',sans-serif;font-weight:400;font-size:18px}
+.card-meta{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:6px;font-size:13px;color:#555}
+.tag{font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:11px;padding:3px 9px;border-radius:999px}
+.tag-simple{background:var(--sage)}
+.tag-classic{background:var(--coral)}
+.tag-glam{background:var(--gold-grad)}
+.occ{font-weight:600;font-size:11px;letter-spacing:.06em;padding:2px 9px;border-radius:999px;border:1.5px solid var(--ink);text-transform:uppercase}
+.lb-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
+
+/* lightbox */
+.lbox{position:fixed;inset:0;background:rgba(20,20,20,.94);z-index:100;display:none;align-items:center;justify-content:center;padding:20px}
+.lbox.open{display:flex}
+.lbox figure{max-width:min(92vw,720px);color:#fff;text-align:center}
+.lbox img{max-height:74vh;margin:0 auto;border-radius:14px}
+.lbox figcaption{margin-top:14px}
+.lbox .t{font-size:20px;font-weight:600}
+.lbox .m{font-size:14px;opacity:.8;margin-top:2px}
+.lbox button{position:absolute;background:rgba(255,255,255,.12);color:#fff;border:0;width:48px;height:48px;border-radius:50%;font-size:24px;cursor:pointer}
+.lb-close{top:18px;right:18px}.lb-prev{left:14px;top:50%;transform:translateY(-50%)}.lb-next{right:14px;top:50%;transform:translateY(-50%)}
+
+/* fine print */
+.fine{background:var(--soft);border-radius:20px;padding:26px 26px;font-size:15px;color:#333}
+.fine p+p{margin-top:10px}
+.fine em{font-style:italic}
+
+/* cta */
+.cta{background:var(--ink);color:#fff;border-radius:26px;padding:54px 30px;text-align:center}
+.cta h2{margin-bottom:10px}
+.cta p{font-size:18px;margin-bottom:24px;opacity:.9}
+.cta .btn-line{border-color:#fff;color:#fff}
+.cta-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+
+/* footer */
+footer{padding:50px 0 30px;font-size:15px}
+.f-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:28px}
+footer h4{font-size:13px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:10px}
+footer ul{list-style:none}footer li{margin:5px 0}
+footer a{text-decoration:none}footer a:hover{text-decoration:underline}
+.f-bottom{border-top:1px solid var(--line);margin-top:34px;padding-top:18px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:13px;color:#666}
+@media(max-width:820px){.f-grid{grid-template-columns:1fr 1fr}}
+
+/* bottom bar */
+.bbar{position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 18px}
+.bbar strong{font-size:16px;letter-spacing:.04em}
+.bbar strong span{background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.bbar .btn{padding:12px 22px}
+
+/* ===== BLACK THEME (matches Set 80 page) ===== */
+:root{--ink:#fff;--white:#000;--line:#262626;--soft:#121212;--muted:#9a9a9a}
+body{background:#000;color:#fff;font-family:'Archivo',system-ui,sans-serif}
+.display,h1,h2{font-family:'Archivo',sans-serif;font-weight:800;font-stretch:112%;letter-spacing:-.01em;line-height:.95}
+.eyebrow,.sec-num{font-family:'Archivo',sans-serif;color:var(--muted);font-weight:500;letter-spacing:.32em;font-size:14px}
+header.site{background:rgba(0,0,0,.94);border-bottom:1px solid var(--line)}
+nav.main a{color:#fff}
+@media(max-width:1240px){nav.main{background:#000;border-bottom:1px solid var(--line)}nav.main a{border-bottom:1px solid var(--line)}}
+.menu-btn{color:#fff;font-family:'Archivo',sans-serif;letter-spacing:.2em;text-transform:uppercase}
+.logo img{filter:invert(1)}
+.btn{border-radius:0;letter-spacing:.18em;text-transform:uppercase;font-size:13px;font-family:'Archivo',sans-serif}
+.btn-gold{color:#000}
+.btn-line{border:1.5px solid #fff;color:#fff}
+.hero p.lede{color:#fff}
+.hero .from{color:#fff}
+.hero-img,.card-btn{border-radius:0;background:#111}
+.price-card{border:1.5px solid var(--line);border-radius:0;background:#0b0b0b;color:#fff}
+.price-card:hover{background:#151515;border-color:var(--gold)}
+.price-card:nth-child(3){background:#0b0b0b;border-color:var(--gold)}
+.price-card:nth-child(3):hover{background:#151515}
+.pc-l{color:var(--muted);letter-spacing:.3em;font-weight:500}
+.pc-p{font-family:'Archivo',sans-serif;font-weight:800;font-stretch:112%}
+.pc-go{letter-spacing:.14em;text-transform:uppercase;font-size:12px}
+.price-note{color:var(--muted)}
+.steps li{background:#0b0b0b;border-left:3px solid var(--gold);border-radius:0}
+.steps li::before{font-family:'Archivo',sans-serif;font-weight:800}
+/* lookbook intro */
+.lb-intro{color:#fff;max-width:none;margin:0 0 22px;font-size:18px}
+.lb-new{font-weight:700;letter-spacing:.3em;text-transform:uppercase;font-size:13px;margin:0 0 26px}
+.note{background:#121212;border-left:4px solid var(--gold);padding:20px 24px;margin:0 0 18px;color:#a9a9a9;font-size:17px;line-height:1.6}
+.note strong{color:#fff}
+/* tabs */
+.tabbar{background:#000;border-bottom:1px solid var(--line);margin-top:30px}
+.tabs{background:#121212;border-radius:0;padding:4px}
+.tab{border-radius:0;color:#fff;font-family:'Archivo',sans-serif;letter-spacing:.2em}
+.tab[aria-selected="true"]{background:var(--gold-grad);color:#000}
+.tab[aria-selected="true"] .tab-p{background:none;-webkit-background-clip:initial;background-clip:initial;color:#000}
+.panel-head{color:#fff}.panel-head span{color:var(--muted)}
+/* cards like Set 80: name label then big number */
+.grid{gap:34px 12px}
+.card-txt{flex-direction:column-reverse;align-items:flex-start;gap:8px;margin-top:16px}
+.card-txt .name{color:var(--muted);font-weight:500;letter-spacing:.28em;text-transform:uppercase;font-size:13px;line-height:1.6}
+.card-txt .num{font-family:'Archivo',sans-serif;font-weight:800;font-stretch:112%;font-size:44px;line-height:1;color:#fff}
+.card-meta{margin-top:10px}
+.tag{border-radius:0;color:#000}
+.occ{border-radius:0;background:transparent}
+.occ-christmas{border-color:#E0574F;color:#F08A84}
+.occ-newyear{border-color:var(--gold);color:var(--gold)}
+/* fine print, cta, footer */
+.fine{background:#121212;border-left:4px solid var(--gold);border-radius:0;color:#a9a9a9}
+.fine em{color:#fff;font-style:normal;font-weight:600}
+.cta{background:#0b0b0b;border:1px solid var(--line);border-radius:0}
+footer{border-top:1px solid var(--line);color:#cfcfcf}
+footer h4{color:var(--muted);font-weight:500;letter-spacing:.3em}
+.f-bottom{border-color:var(--line);color:var(--muted)}
+.bbar{background:#0a0a0a;border-top:2px solid var(--gold)}
+.bbar strong{font-family:'Archivo',sans-serif;font-weight:800;font-size:20px}
+.bbar .btn{letter-spacing:.2em}
+.lbox{background:rgba(0,0,0,.96)}
+.wm{font-family:'Archivo',sans-serif;font-weight:800;font-stretch:112%;font-size:19px;letter-spacing:.02em;color:#fff;white-space:nowrap}
+.wm i{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;font-size:22px;background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.banner{background:#000;color:#fff;border-bottom:1px solid var(--line)}
+.logo{text-decoration:none}
+@media(max-width:1380px){nav.main{display:none;position:absolute;top:68px;left:0;right:0;flex-direction:column;gap:0;padding:8px 22px 18px}nav.main.open{display:flex}nav.main a{padding:11px 0}.menu-btn{display:block}.hdr>.btn{display:none}}
+@media(max-width:520px){.bbar strong{font-size:16px}.bbar .btn{padding:12px 16px;font-size:12px;letter-spacing:.14em;white-space:nowrap}.wm{font-size:16px}.wm i{font-size:19px}}
+.occ{border-color:var(--gold);color:var(--gold)}
+.occrow{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.occrow[hidden]{display:none}
+.ochip{background:transparent;border:1.5px solid var(--line);color:#cfcfcf;font:600 12px 'Archivo',sans-serif;letter-spacing:.18em;text-transform:uppercase;padding:9px 14px;cursor:pointer}
+.ochip[aria-pressed="true"]{border-color:var(--gold);color:var(--gold)}
+.ochip:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.card[hidden]{display:none}
+.empty{color:var(--muted);padding:20px 0}
+.osoon{align-self:center;color:var(--muted);font-size:12px;letter-spacing:.18em;text-transform:uppercase;margin-left:6px}
+
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>{% endraw %}
+</head>
+<body data-default="{{ deftier }}">
+
+<div class="banner" aria-label="Announcements">
+  <div class="marquee">
+    <span><a href="#lookbook" class="hl">{{ hs.page_title | upper }} · FROM ${{ hs.prices.simple }} — Tap to see the lookbook</a></span>
+    <span>$50 REWARDS HEAD START FOR NEW CLIENTS</span>
+    <span>5-HOUR VALIDATED PARKING WITH $100+ CASH PURCHASE</span>
+    <span>GROUP BOOKINGS · BRIDAL · BIRTHDAYS</span>
+    <span>WALK-INS WELCOME · HISTORIC CORE, DTLA</span>
+    <span><a href="tel:+12132660077" data-ev="call_click">213-266-0077</a></span>
+    <span><a href="#lookbook" class="hl">{{ hs.page_title | upper }} · FROM ${{ hs.prices.simple }} — Tap to see the lookbook</a></span>
+    <span>$50 REWARDS HEAD START FOR NEW CLIENTS</span>
+    <span>5-HOUR VALIDATED PARKING WITH $100+ CASH PURCHASE</span>
+    <span>GROUP BOOKINGS · BRIDAL · BIRTHDAYS</span>
+    <span>WALK-INS WELCOME · HISTORIC CORE, DTLA</span>
+    <span><a href="tel:+12132660077" data-ev="call_click">213-266-0077</a></span>
+  </div>
+</div>
+
+<header class="site">
+  <div class="wrap hdr">
+    <a class="logo" href="/" aria-label="Polished Nail Bar DTLA home"><span class="wm">Polished <i>Nail Bar</i> · DTLA</span></a>
+    <nav class="main" id="mainnav" aria-label="Main">
+      <a href="/">Home</a>
+      <a href="/about/">About</a>
+      <a href="/services/">Services</a>
+      <a href="/holiday-set/" aria-current="page">Holiday Set</a>
+      <a href="/gallery/">Gallery</a>
+      <a href="/reviews/">Reviews</a>
+      <a href="/group-booking/">Group Booking</a>
+      <a href="/the-latest/">The Latest</a>
+      <a href="/journal/">Journal</a>
+      <a href="/careers/">Careers</a>
+      <a href="/policies/">Policies</a>
+      <a href="/faq/">FAQ</a>
+      <a href="/contact/">Contact</a>
+    </nav>
+    <a class="btn btn-gold" href="{{ hs.book_url }}" data-ev="book_click">Book</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mainnav">Menu</button>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">01 — {{ hs.eyebrow }}</p>
+        <h1 class="display">Holiday <span class="g">Set</span></h1>
+        <p class="lede">{{ hs.tagline }}</p>
+        <span class="from accent">from ${{ hs.prices.simple }}</span>
+        <div class="hero-actions">
+          <a class="btn btn-gold" href="{{ hs.book_url }}" data-ev="book_click">Book {{ hs.page_title }}</a>
+          <a class="btn btn-line" href="#lookbook">See the lookbook</a>
+        </div>
+      </div>
+      <div class="hero-img">
+        <img src="{{ hs.hero_image }}" alt="{{ hs.page_title }} — short Gel-X with nail art at Polished Nail Bar DTLA" width="900" height="1125">
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing">
+    <div class="wrap">
+      <p class="sec-num">02 — Pricing</p>
+      <h2 class="display">Pick your tier</h2>
+      <div class="prices">
+{%- for t in tiers %}
+      <a class="price-card" href="#{{ t[0] }}" data-jump="{{ t[0] }}"><span class="pc-l">{{ t[1] }}</span><span class="pc-p">${{ t[2] }}</span><span class="pc-go">See {{ t[1] }} looks →</span></a>
+{%- endfor %}
+      </div>
+      <p class="price-note">{{ hs.price_note }}</p>
+    </div>
+  </section>
+
+  <section id="how">
+    <div class="wrap">
+      <p class="sec-num">03 — How it works</p>
+      <h2 class="display">Three steps</h2>
+      <ol class="steps">
+        {%- for s in hs.steps %}
+        <li>{{ s }}</li>
+        {%- endfor %}
+      </ol>
+    </div>
+  </section>
+
+  <section id="lookbook">
+    <div class="wrap">
+      <p class="sec-num">04 — THE LOOKBOOK</p>
+      <h2 class="display">Find your look</h2>
+      <p class="lb-intro">{{ hs.lookbook_intro }}</p>
+      <p class="lb-new">✦ {{ hs.new_designs_note }}</p>
+      <div class="note"><strong>Photos are for inspiration only.</strong> {{ hs.photo_disclaimer }}</div>
+      <div class="note"><strong>Have your own inspo?</strong> {{ hs.inspo_note }}</div>
+      <div class="lb-body">
+      <div class="tabbar">
+        <div class="tabs" role="tablist" aria-label="Holiday Set tiers">
+{%- for t in tiers %}
+      <button class="tab" type="button" role="tab" id="tab-{{ t[0] }}" aria-controls="panel-{{ t[0] }}" aria-selected="{{ 'true' if t[0] == deftier else 'false' }}" data-tier="{{ t[0] }}"><span class="tab-l">{{ t[1] }}</span><span class="tab-p">${{ t[2] }}</span></button>
+{%- endfor %}
+        </div>
+        <div class="occrow" id="occrow" role="group" aria-label="Filter by occasion" hidden></div>
+      </div>
+{%- for t in tiers %}
+    <div class="panel" id="panel-{{ t[0] }}" role="tabpanel" aria-labelledby="tab-{{ t[0] }}"{% if t[0] != deftier %} hidden{% endif %}>
+      <p class="panel-head"><strong>{{ t[1] }} · ${{ t[2] }}</strong> <span class="count"></span></p>
+      <ul class="grid">
+      {%- for d in hs.designs %}{% if d.image and (d.tier | lower) == t[0] and d.show != false and (d.occasion in hs.occasions_on_page) %}
+      <li class="card" data-occ="{{ d.occasion | slugify }}" data-occ-label="{{ d.occasion }}">
+        <button class="card-btn" type="button" data-full="{{ d.image }}" data-name="{{ d.name }}" data-meta="{{ t[1] }} · ${{ t[2] }} · {{ d.occasion }}">
+          <img src="{{ d.image }}" alt="{{ hs.page_title }} design: {{ d.name }} — {{ t[1] }} tier, {{ d.occasion }}" loading="lazy">
+        </button>
+        <div class="card-txt"><span class="num"></span><span class="name">{{ d.name }}</span></div>
+        <div class="card-meta"><span class="tag tag-{{ t[0] }}">{{ t[1] }}</span><span class="occ">{{ d.occasion }}</span></div>
+      </li>
+      {%- endif %}{% endfor %}
+      </ul>
+    </div>
+{%- endfor %}
+      </div>
+      <div class="lb-cta">
+        <a class="btn btn-gold" href="{{ hs.book_url }}" data-ev="book_click">Book {{ hs.page_title }}</a>
+        <a class="btn btn-line" href="sms:+13233793469" data-ev="text_click">Text 323-379-3469</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="fine-print">
+    <div class="wrap">
+      <div class="fine">
+        <p>{{ hs.fine_print }}</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="cta">
+        <h2 class="display">Ready when you are</h2>
+        <p>215 W 6th St, R-114 · Historic Core, Downtown LA</p>
+        <div class="cta-actions">
+          <a class="btn btn-gold" href="{{ hs.book_url }}" data-ev="book_click">Book an appointment</a>
+          <a class="btn btn-line" href="tel:+12132660077" data-ev="call_click">Call 213-266-0077</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div>
+        <h4>Polished Nail Bar · DTLA</h4>
+        <p>215 W 6th St, R-114<br>Los Angeles, CA 90014</p>
+        <p style="margin-top:8px"><a href="tel:+12132660077" data-ev="call_click">Call 213-266-0077</a><br><a href="sms:+13233793469" data-ev="text_click">Text 323-379-3469</a><br><a href="mailto:polishednailbar.dtla@gmail.com">polishednailbar.dtla@gmail.com</a></p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul><li><a href="/services/">Services</a></li><li><a href="/holiday-set/">Holiday Set</a></li><li><a href="/gallery/">Gallery</a></li><li><a href="/reviews/">Reviews</a></li><li><a href="/group-booking/">Group Booking</a></li></ul>
+      </div>
+      <div>
+        <h4>More</h4>
+        <ul><li><a href="/the-latest/">The Latest</a></li><li><a href="/journal/">Journal</a></li><li><a href="/careers/">Careers</a></li><li><a href="https://www.instagram.com/polished_dtla/" data-ev="instagram_click">Instagram</a></li></ul>
+      </div>
+      <div>
+        <h4>Hours</h4>
+        <ul><li>Mon–Sat 9 AM–7:30 PM</li><li>Sun 9 AM–6 PM</li></ul>
+      </div>
+    </div>
+    <div class="f-bottom">
+      <span>© 2026 Polished Nail Bar DTLA</span>
+      <span><a href="/policies/">Policies</a> · <a href="/faq/">FAQ</a> · <a href="/contact/">Contact</a></span>
+    </div>
+  </div>
+</footer>
+
+<div class="bbar">
+  <strong>{{ hs.page_title }} · <span>from ${{ hs.prices.simple }}</span></strong>
+  <a class="btn btn-gold" href="{{ hs.book_url }}" data-ev="book_click">Book now</a>
+</div>
+
+<div class="lbox" id="lbox" role="dialog" aria-modal="true" aria-label="Design preview">
+  <button class="lb-close" type="button" aria-label="Close">×</button>
+  <button class="lb-prev" type="button" aria-label="Previous design">‹</button>
+  <figure><img id="lb-img" alt=""><figcaption><div class="t" id="lb-t"></div><div class="m" id="lb-m"></div></figcaption></figure>
+  <button class="lb-next" type="button" aria-label="Next design">›</button>
+</div>
+
+{% raw %}<script>
+(function(){
+  var DEFAULT=document.body.getAttribute('data-default')||'classic', tiers=['simple','classic','glam'];
+  // number every design in order: Simple, then Classic, then Glam
+  var _n=0; tiers.forEach(function(k){document.querySelectorAll('#panel-'+k+' .card').forEach(function(c){_n++;c.querySelector('.num').textContent='#'+_n;var b=c.querySelector('.card-btn');b.setAttribute('data-title','#'+_n+' '+b.getAttribute('data-name'));});});
+  var tabs=document.querySelectorAll('.tab');
+  function show(t,scroll){
+    if(tiers.indexOf(t)<0)t=DEFAULT;
+    tabs.forEach(function(b){var on=b.dataset.tier===t;b.setAttribute('aria-selected',on);b.tabIndex=on?0:-1;});
+    tiers.forEach(function(k){document.getElementById('panel-'+k).hidden=(k!==t);});
+    if(scroll)document.getElementById('lookbook').scrollIntoView({behavior:'smooth'});
+  }
+  tabs.forEach(function(b,i){
+    b.addEventListener('click',function(){show(b.dataset.tier);history.replaceState(null,'','#'+b.dataset.tier);});
+    b.addEventListener('keydown',function(e){
+      var d=e.key==='ArrowRight'?1:e.key==='ArrowLeft'?-1:0; if(!d)return;
+      var n=tabs[(i+d+tabs.length)%tabs.length]; n.focus(); n.click();
+    });
+  });
+  document.querySelectorAll('[data-jump]').forEach(function(a){
+    a.addEventListener('click',function(e){e.preventDefault();show(a.dataset.jump,true);history.replaceState(null,'','#'+a.dataset.jump);});
+  });
+  var h=location.hash.slice(1);
+  if(tiers.indexOf(h)>-1){show(h,true);}else{show(DEFAULT);}
+
+  // occasion filter: one button per occasion that has photos (built automatically from the labels)
+  var cards=Array.prototype.slice.call(document.querySelectorAll('.card')),occs=[],labels={};
+  cards.forEach(function(c){if(occs.indexOf(c.dataset.occ)<0){occs.push(c.dataset.occ);labels[c.dataset.occ]=c.dataset.occLabel;}});
+  var row=document.getElementById('occrow');
+  function filt(o){
+    row.querySelectorAll('.ochip').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.occ===o);});
+    tiers.forEach(function(k){
+      var p=document.getElementById('panel-'+k),n=0;
+      p.querySelectorAll('.card').forEach(function(c){var on=(o==='all'||c.dataset.occ===o);c.hidden=!on;if(on)n++;});
+      p.querySelector('.count').textContent=n+(n===1?' look':' looks');
+      var e=p.querySelector('.empty'); if(!e){e=document.createElement('p');e.className='empty';p.appendChild(e);}
+      e.textContent=n?'':'No looks for this occasion in this tier yet — try another tier.';
+    });
+  }
+  var list0=occs.length>1?['all'].concat(occs):occs;
+  list0.forEach(function(o){var b=document.createElement('button');b.type='button';b.className='ochip';b.dataset.occ=o;b.textContent=o==='all'?'All':labels[o];b.addEventListener('click',function(){filt(o);});row.appendChild(b);});
+  if(occs.length===1){var m=document.createElement('span');m.className='osoon';m.textContent='More holidays coming soon';row.appendChild(m);}
+  row.hidden=false; filt(occs.length>1?'all':occs[0]);
+
+  // lightbox (moves within the open tier)
+  var box=document.getElementById('lbox'),img=document.getElementById('lb-img'),tt=document.getElementById('lb-t'),mm=document.getElementById('lb-m'),list=[],idx=0,last;
+  function render(){var b=list[idx];img.src=b.dataset.full;img.alt=b.dataset.title;tt.textContent=b.dataset.title;mm.textContent=b.dataset.meta;}
+  function open(b){last=b;list=Array.prototype.slice.call(b.closest('.panel').querySelectorAll('.card:not([hidden]) .card-btn'));idx=list.indexOf(b);render();box.classList.add('open');document.body.style.overflow='hidden';box.querySelector('.lb-close').focus();}
+  function close(){box.classList.remove('open');document.body.style.overflow='';if(last)last.focus();}
+  function step(d){idx=(idx+d+list.length)%list.length;render();}
+  document.querySelectorAll('.card-btn').forEach(function(b){b.addEventListener('click',function(){open(b);});});
+  box.querySelector('.lb-close').onclick=close;
+  box.querySelector('.lb-prev').onclick=function(){step(-1);};
+  box.querySelector('.lb-next').onclick=function(){step(1);};
+  box.addEventListener('click',function(e){if(e.target===box)close();});
+  document.addEventListener('keydown',function(e){if(!box.classList.contains('open'))return;if(e.key==='Escape')close();if(e.key==='ArrowRight')step(1);if(e.key==='ArrowLeft')step(-1);});
+  var sx=0;box.addEventListener('touchstart',function(e){sx=e.touches[0].clientX;},{passive:true});
+  box.addEventListener('touchend',function(e){var dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>45)step(dx<0?1:-1);});
+
+  // mobile menu
+  var mb=document.querySelector('.menu-btn'),nav=document.getElementById('mainnav');
+  mb.addEventListener('click',function(){var o=nav.classList.toggle('open');mb.setAttribute('aria-expanded',o);});
+
+  // GA4 tap events
+  document.querySelectorAll('[data-ev]').forEach(function(a){a.addEventListener('click',function(){if(window.gtag)gtag('event',a.dataset.ev,{link_url:a.href,page:'holiday-set'});});});
+})();
+</script>{% endraw %}
+</body>
+</html>
