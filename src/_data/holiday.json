@@ -184,6 +184,76 @@
       "tier": "Simple",
       "occasion": "December Holidays",
       "show": true
+    },
+    {
+      "image": "/images/holiday/IMG_7252.webp",
+      "name": "Cute ornaments & Christmas treee",
+      "tier": "Classic",
+      "occasion": "December Holidays",
+      "show": true
+    },
+    {
+      "image": "/images/holiday/IMG_7255.webp",
+      "name": "Candy cane & Snow man",
+      "tier": "Classic",
+      "occasion": "December Holidays",
+      "show": true
+    },
+    {
+      "image": "/images/holiday/IMG_7272.webp",
+      "name": "Twinkle Lights & Gift Bow",
+      "tier": "Classic",
+      "occasion": "December Holidays",
+      "show": true
+    },
+    {
+      "image": "/images/holiday/IMG_7275.webp",
+      "name": "Gold Chrome Ornament & Snow Flake",
+      "tier": "Glam",
+      "occasion": "December Holidays",
+      "show": true
+    },
+    {
+      "image": "/images/holiday/IMG_7267.webp",
+      "name": "3D ornament & Polka Dot",
+      "tier": "Classic",
+      "occasion": "December Holidays",
+      "show": true
+    },
+    {
+      "image": "/images/holiday/IMG_7269.webp",
+      "name": "Cozy 3D sweater knit",
+      "tier": "Glam",
+      "occasion": "December Holidays",
+      "show": true
+    },
+    {
+      "image": "/images/holiday/IMG_7264.webp",
+      "name": "Elf Belt",
+      "tier": "Classic",
+      "occasion": "December Holidays",
+      "show": true
+    },
+    {
+      "image": "/images/holiday/IMG_7257.webp",
+      "name": "Winter pine & gold snow flake",
+      "tier": "Glam",
+      "occasion": "December Holidays",
+      "show": true
+    },
+    {
+      "image": "/images/holiday/IMG_6958.webp",
+      "name": "Gold shinny & Red chrome ribbons",
+      "tier": "Glam",
+      "occasion": "December Holidays",
+      "show": true
+    },
+    {
+      "image": "/images/holiday/IMG_6740.webp",
+      "name": "Emerald ribbon",
+      "tier": "Glam",
+      "occasion": "December Holidays",
+      "show": true
     }
   ],
   "prices": {
