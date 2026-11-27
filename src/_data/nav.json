@@ -2,6 +2,7 @@
   { "label": "Home",          "url": "/" },
   { "label": "About",         "url": "/about/" },
   { "label": "Services",      "url": "/services/" },
+  { "label": "Color Menu",    "url": "https://colors.polishednailbardtla.com" },
   { "label": "Holiday Set",   "url": "/holiday-set/" },
   { "label": "Gallery",       "url": "/gallery/" },
   { "label": "Reviews",       "url": "/reviews/" },
